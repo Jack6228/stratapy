@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stratapy"
-version = "0.9.0"
+version = "0.9.1"
 description = "A tool for automated stratigraphic log visualisation"
 keywords = ["stratigraphy", "stratigraphic log", "visualisation", "python"]
 authors = [

@@ -11,7 +11,7 @@
 A Python-based framework for automated visualisation of creating standardised, reproducible, and digitally integrated stratigraphic logs.
 
 [![PyPI](https://img.shields.io/badge/PyPI-stratapy-FCB001?logo=pypi)](https://pypi.org/project/stratapy/)
-[![Cite](https://img.shields.io/badge/DOI--blue)](https://doi.org/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19320013-blue)](https://doi.org/10.5281/zenodo.19320013)
 [![Docs](https://img.shields.io/badge/ReadTheDocs-latest-8ca1af?logo=readthedocs)](https://stratapy.readthedocs.io/en/latest/?badge=latest)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/ManuscriptFigures.ipynb)
 
@@ -81,20 +81,20 @@ For full API reference and tutorials, visit [our ReadTheDocs page](https://strat
 
 If you use this software in your research or otherwise, please cite it as follows:
 
-> Smith, et al. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+> Smith, et al. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation. Zenodo. https://doi.org/10.5281/zenodo.19320013
 
 For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the following BibTeX entry:
 
 ```bibtex
 @software{smith_stratapy_2026,
-    author = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
-    title = {{stratapy: A Python tool for automated stratigraphic log visualisation}},
-    month = {3},
-    year = {2026},
-    publisher = {Zenodo},
-    version = {v0.9.0},
-    doi = {},
-    url = {https://github.com/Jack6228/stratapy}
+  author       = {Lee Smith, Jack and Antoniou, Christina and Alexander, Ruaridh},
+  title        = {stratapy: A Tool for Automated Stratigraphic Log Visualisation},
+  month        = mar,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v0.9.0},
+  doi          = {10.5281/zenodo.19320012},
+  url          = {https://doi.org/10.5281/zenodo.19320012},
 }
 ```
 ## License

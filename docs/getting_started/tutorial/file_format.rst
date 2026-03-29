@@ -155,8 +155,6 @@ The format is ``erosion;frequency``, where `erosion` is the amplitude of the sin
 
 Note that the total height (peak to trough) of the sinusoidal indicator is twice the amplitude. Some examples are provided in the image below:
 
-.. TODO
-
 .. _lenses:
 
 .. rubric:: lenses

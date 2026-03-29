@@ -40,7 +40,7 @@ Requirements and Behaviour
 - The axis is added to the left of your existing log, and the y-axis labels/ticks are moved accordingly.
 
 .. note::
-  To add chronostratigraphy to a non-age-based log or to add it to a more complex figure, the :py:meth:`stratapy.core.chronostratigraphy` function can plot standalone chronostratigraphy, offering more control and flexibility, such as horizontal orientation and custom age ranges. See XXX for an example.
+  To add chronostratigraphy to a non-age-based log or to add it to a more complex figure, the :py:meth:`stratapy.core.chronostratigraphy` function can plot standalone chronostratigraphy, offering more control and flexibility, such as horizontal orientation and custom age ranges. See the API reference or documentation for details.
    
 Examples
 --------
