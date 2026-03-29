@@ -81,20 +81,20 @@ For full API reference and tutorials, visit [our ReadTheDocs page](https://strat
 
 If you use this software in your research or otherwise, please cite it as follows:
 
-> Smith, et al. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation. Zenodo. https://doi.org/10.5281/zenodo.19320013
+> Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.1). Zenodo. https://doi.org/10.5281/zenodo.19320013
 
 For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the following BibTeX entry:
 
 ```bibtex
 @software{smith_stratapy_2026,
-  author       = {Lee Smith, Jack and Antoniou, Christina and Alexander, Ruaridh},
+  author       = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
   title        = {stratapy: A Tool for Automated Stratigraphic Log Visualisation},
   month        = mar,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v0.9.0},
-  doi          = {10.5281/zenodo.19320012},
-  url          = {https://doi.org/10.5281/zenodo.19320012},
+  version      = {v0.9.1},
+  doi          = {10.5281/zenodo.19320013},
+  url          = {https://doi.org/10.5281/zenodo.19320013},
 }
 ```
 ## License

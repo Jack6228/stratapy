@@ -499,7 +499,7 @@ class LogObject:
         triangle = Polygon(triangle_coords, closed=True, facecolor=fill_color, edgecolor=edge_color, linewidth=linewidth)
         self.ax.add_patch(triangle)
 
-    def save(self, filename='./stratapy_output', transparent=False) -> None:
+    def save(self, filename='./stratapy_output.png', transparent=False) -> None:
         """
         Saves the current figure to a file. The filename should include the desired file extension (e.g., .png, .jpg, .pdf, .svg). If no extension is provided, it defaults to .png. 
 
@@ -569,7 +569,7 @@ class MultiLogObject:
         self.logs = logs
         self.leg = leg
 
-    def save(self, filename='./stratapy_output', transparent=False) -> None:
+    def save(self, filename='./stratapy_output.png', transparent=False) -> None:
         """
         Saves the current figure to a file. The filename should include the desired file extension (e.g., .png, .jpg, .pdf, .svg). If no extension is provided, it defaults to .png.
 

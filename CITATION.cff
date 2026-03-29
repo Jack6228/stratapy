@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as follows."
 authors:
-  - family-names: "Lee Smith"
-    given-names: "Jack"
+  - family-names: "Smith"
+    given-names: "Jack Lee"
     orcid: "https://orcid.org/0000-0002-2935-625X"
     affiliation: "University of Edinburgh"
   - family-names: "Antoniou"

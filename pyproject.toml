@@ -8,7 +8,7 @@ version = "0.9.1"
 description = "A tool for automated stratigraphic log visualisation"
 keywords = ["stratigraphy", "stratigraphic log", "visualisation", "python"]
 authors = [
-    { name="Jack Smith" },
+    { name="Jack Lee Smith" },
     { name="Christina Antoniou" },
     { name="Ruaridh Alexander" }
 ]
