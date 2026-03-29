@@ -1,0 +1,10 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+-1,601,,m,m,,,,,,gradational
+-1.25,605,,cb,cb,,,601,,,
+-1.75,605,,cb,cb,,0.05;0.4,,,,gradational
+-1.84,601,,vc,vc,,,,,,
+-1.91,601,,vc,vc,,0.005,605,,planar crossbedding,gradational
+-2.13,606,,p,p,,0.005,,,,gradational
+-2.42,603,,cb,vc,,0.005;0.5,,,planar crossbedding,gradational
+-2.68,606,,cb,cb,,0.05;0.8,,,,gradational
+-3,603,0.6,cb,vc,,,,,,

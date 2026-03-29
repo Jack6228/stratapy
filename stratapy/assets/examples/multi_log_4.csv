@@ -1,0 +1,9 @@
+﻿height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+-1.5,fine gravel,,f,f,,0.01,,,rhizolith,
+-1.8,607,,f,f,,0.01,,,planar laminations,gradational
+-2,fine gravel,,c,f,convex,0.01;0.6,,,clasts,gradational
+-2.5,607,,f,f,,0.01,,,,gradational
+-3,602,,p,vc,,0.04;0.5,,,clast imbrication,
+-3.2,607,,f,f,,0.01,,,,gradational
+-3.5,602,,p,vc,concave,0.04;0.5,,,clast imbrication,
+-4,607,1,f,f,,,,,,

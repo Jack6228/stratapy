@@ -1,0 +1,184 @@
+﻿Name,Rank,TextColour,FillColour,Age_S,Age_E,ShortName,MediumName
+Meghalayan,Stage,Black,#FDEDEC,0,0.0042,Me,Megh.
+Northgrippian,Stage,Black,#FDECE4,0.0042,0.0082,No,Nort.
+Greenlandian,Stage,Black,#FEECDB,0.0082,0.0117,Gr,Gree.
+Holocene,Series,Black,#FEEBD2,0,0.0117,Ho,Holo.
+Upper Pleistocene,Stage,Black,#FFF2D3,0.0117,0.129,Up,U. Ple.
+Chibanian,Stage,Black,#FFF2C7,0.129,0.774,Ch,Chib.
+Calabrian,Stage,Black,#FFF2BA,0.774,1.8,Ca,Cala.
+Gelasian,Stage,Black,#FFEDB3,1.8,2.58,Ge,Gela.
+Pleistocene,Series,Black,#FFEFAF,0.0117,2.58,Pl,Plei.
+Quaternary,System,Black,#F9F97F,0,2.58,Qu,Quat.
+Piacenzian,Stage,Black,#FFFFBF,2.58,3.6,Pi,Piac.
+Zanclean,Stage,Black,#FFFFB3,3.6,5.333,Za,Zanc.
+Pliocene,Series,Black,#FFFF99,2.58,5.333,Pl,Plio.
+Messinian,Stage,Black,#FFFF73,5.333,7.246,Me,Mess.
+Tortonian,Stage,Black,#FFFF66,7.246,11.63,To,Tort.
+Serravallian,Stage,Black,#FFFF59,11.63,13.82,Se,Serr.
+Langhian,Stage,Black,#FFFF4D,13.82,15.98,La,Lang.
+Burdigalian,Stage,Black,#FFFF41,15.98,20.45,Bu,Burd.
+Aquitanian,Stage,Black,#FFFF33,20.45,23.04,Aq,Aqui.
+Miocene,Series,Black,#FFFF00,5.333,23.04,Mi,Mioc.
+Neogene,System,Black,#FFE619,2.58,23.04,Ne,Neog.
+Chattian,Stage,Black,#FEE6AA,23.04,27.3,Ch,Chat.
+Rupelian,Stage,Black,#FED99A,27.3,33.9,Ru,Rupe.
+Oligocene,Series,Black,#FEC07A,23.04,33.9,Ol,Olig.
+Priabonian,Stage,Black,#FDCDA1,33.9,37.71,Pr,Pria.
+Bartonian,Stage,Black,#FDC091,37.71,41.03,Ba,Bart.
+Lutetian,Stage,Black,#FDB482,41.03,48.07,Lu,Lute.
+Ypresian,Stage,Black,#FCA773,48.07,56,Yp,Ypre.
+Eocene,Series,Black,#FDB46C,33.9,56,Eo,Eoce.
+Thanetian,Stage,Black,#FDBF6F,56,59.24,Th,Than.
+Selandian,Stage,Black,#FEBF65,59.24,61.66,Se,Sela.
+Danian,Stage,Black,#FDB462,61.66,66,Da,Dani.
+Paleocene,Series,Black,#FDA75F,56,66,Pa,Pale.
+Paleogene,System,Black,#FD9A52,23.04,66,:,Pale.
+Cenozoic,Erathem,Black,#F2F91D,0,66,S,Ceno.
+Maastrichtian,Stage,Black,#F2FA8C,66,72.2,Ma,Maas.
+Campanian,Stage,Black,#E6F47F,72.2,83.6,Ca,Camp.
+Santonian,Stage,Black,#D9EF74,83.6,85.7,Sa,Sant.
+Coniacian,Stage,Black,#CCE968,85.7,89.8,Co,Coni.
+Turonian,Stage,Black,#BFE35D,89.8,93.9,Tu,Turo.
+Cenomanian,Stage,Black,#B3DE53,93.9,100.5,Ce,Ceno.
+Upper Cretaceous,Series,Black,#A6D84A,66,100.5,Up,U. Cre.
+Albian,Stage,Black,#CCEA97,100.5,113.2,Al,Albi.
+Aptian,Stage,Black,#BFE48A,113.2,121.4,Ap,Apti.
+Barremian,Stage,Black,#B3DF7F,121.4,125.77,Ba,Barr.
+Hauterivian,Stage,Black,#A6D975,125.77,132.6,Ha,Haut.
+Valanginian,Stage,Black,#99D36A,132.6,137.05,Va,Vala.
+Berriasian,Stage,Black,#8CCD60,137.05,143.1,Be,Berr.
+Lower Cretaceous,Series,Black,#8CCD57,100.5,143.1,Lo,L. Cre.
+Cretaceous,System,Black,#7FC64E,66,143.1,Cr,Cret.
+Tithonian,Stage,Black,#D9F1F7,143.1,149.2,Ti,Tith.
+Kimmeridgian,Stage,Black,#CCECF4,149.2,154.8,Ki,Kimm.
+Oxfordian,Stage,Black,#BFE7F1,154.8,161.5,Ox,Oxfo.
+Upper Jurassic,Series,Black,#B3E3EE,143.1,161.5,Up,U. Jur.
+Callovian,Stage,Black,#BFE7E5,161.5,165.3,Ca,Call.
+Bathonian,Stage,Black,#B3E2E3,165.3,168.2,Ba,Bath.
+Bajocian,Stage,Black,#A6DDE0,168.2,170.9,Ba,Bajo.
+Aalenian,Stage,Black,#9AD9DD,170.9,174.7,Aa,Aale.
+Middle Jurassic,Series,Black,#80CFD8,161.5,174.7,Mi,M. Jur.
+Toarcian,Stage,Black,#99CEE3,174.7,184.2,To,Toar.
+Pliensbachian,Stage,White,#80C5DD,184.2,192.9,Pl,Plie.
+Sinemurian,Stage,White,#67BCD8,192.9,199.5,Si,Sine.
+Hettangian,Stage,White,#4EB3D3,199.5,201.4,He,Hett.
+Lower Jurassic,Series,White,#42AED0,174.7,201.4,Lo,L. Jur.
+Jurassic,System,White,#34B2C9,143.1,201.4,Ju,Jura.
+Rhaetian,Stage,Black,#E3B9DB,201.4,205.7,Rh,Rhae.
+Norian,Stage,Black,#D6AAD3,205.7,227.3,No,Nori.
+Carnian,Stage,Black,#C99BCB,227.3,237,Ca,Carn.
+Upper Triassic,Series,White,#BD8CC3,201.4,237,Up,U. Tri.
+Ladinian,Stage,White,#C983BF,237,241.464,La,Ladi.
+Anisian,Stage,White,#BC75B7,241.464,246.7,An,Anis.
+Middle Triassic,Series,White,#B168B1,237,246.7,Mi,M. Tri.
+Olenekian,Stage,White,#B051A5,246.7,249.9,Ol,Olen.
+Induan,Stage,White,#A4469F,249.9,251.902,In,Indu.
+Lower Triassic,Series,White,#983999,246.7,251.902,Lo,L. Tri.
+Triassic,System,White,#812B92,201.4,251.902,^,Tria.
+Mesozoic,Erathem,Black,#67C5CA,66,251.902,},Meso.
+Changhsingian,Stage,Black,#FCC0B2,251.902,254.14,Ch,Chan.
+Wuchiapingian,Stage,Black,#FCB4A2,254.14,259.51,Wu,Wuch.
+Lopingian,Series,Black,#FBA794,251.902,259.51,Lo,Lopi.
+Capitanian,Stage,Black,#FB9A85,259.51,264.28,Ca,Capi.
+Wordian,Stage,Black,#FB8D76,264.28,266.9,Wo,Word.
+Roadian,Stage,Black,#FB8069,266.9,274.4,Ro,Road.
+Guadalupian,Series,Black,#FB745C,259.51,274.4,Gu,Guad.
+Kungurian,Stage,Black,#E38776,274.4,283.3,Ku,Kung.
+Artinskian,Stage,Black,#E37B68,283.3,290.1,Ar,Arti.
+Sakmarian,Stage,Black,#E36F5C,290.1,293.52,Sa,Sakm.
+Asselian,Stage,Black,#E36350,293.52,298.9,As,Asse.
+Cisuralian,Series,Black,#EF5845,274.4,298.9,Ci,Cisu.
+Permian,System,Black,#F04028,251.902,298.9,Pe,Perm.
+Gzhelian,Stage,Black,#CCD4C7,298.9,303.7,Gz,Gzhe.
+Kasimovian,Stage,Black,#BFD0C5,303.7,307,Ka,Kasi.
+Upper Pennsylvanian,Series,Black,#BFD0BA,298.9,307,Up,U. Pen.
+Moscovian,Stage,Black,#B3CBB9,307,315.2,Mo,Mosc.
+Middle Pennsylvanian,Series,Black,#A6C7B7,307,315.2,Mi,M. Pen.
+Bashkirian,Stage,Black,#99C2B5,315.2,323.4,Ba,Bash.
+Lower Pennsylvanian,Series,Black,#8CBEB4,315.2,323.4,Lo,L. Pen.
+Pennsylvanian,Subsystem,Black,#7EBCC6,298.9,323.4,*,Penn.
+Serpukhovian,Stage,Black,#BFC26B,323.4,330.3,Se,Serp.
+Upper Mississippian,Series,Black,#B3BE6C,323.4,330.3,Up,U. Mis.
+Visean,Stage,Black,#A6B96C,330.3,346.7,Vi,Vise.
+Middle Mississippian,Series,Black,#99B46C,330.3,346.7,Mi,M. Mis.
+Tournaisian,Stage,Black,#8CB06C,346.7,358.86,To,Tour.
+Lower Mississippian,Series,Black,#80AB6C,346.7,358.86,Lo,L. Mis.
+Mississippian,Subsystem,White,#678F66,323.4,358.86,Mi,Miss.
+Carboniferous,System,White,#67A599,298.9,358.86,Ca,Carb.
+Famennian,Stage,Black,#F2EDB3,358.86,372.15,Fa,Fame.
+Frasnian,Stage,Black,#F2EDAD,372.15,382.31,Fr,Fras.
+Upper Devonian,Series,Black,#F1E19D,358.86,382.31,Up,U. Dev.
+Givetian,Stage,Black,#F1E185,382.31,387.95,Gi,Give.
+Eifelian,Stage,Black,#F1D576,387.95,393.47,Ei,Eife.
+Middle Devonian,Series,Black,#F1C868,382.31,393.48,M,M. Dev.
+Emsian,Stage,Black,#E5D075,393.48,410.62,Em,Emsi.
+Pragian,Stage,Black,#E5C468,410.62,413.02,Pr,Prag.
+Lochkovian,Stage,Black,#E5B75A,413.02,419.62,Lo,Loch.
+Lower Devonian,Series,Black,#E5AC4D,393.47,419.62,Lo,L. Dev.
+Devonian,System,Black,#CB8C37,358.86,419.62,De,Devo.
+,Stage,Black,#E6F5E1,419.62,422.7,,
+Pridoli,Series,Black,#E6F5E1,419.62,422.7,Pr,Prid.
+Ludfordian,Stage,Black,#D9F0DF,422.7,425,Lu,L. Lud
+Gorstian,Stage,Black,#CCECDD,425,426.7,Go,Gors.
+Ludlow,Series,Black,#BFE6CF,422.7,426.7,Lu,Ludl.
+Homerian,Stage,Black,#CCEBD1,426.7,430.6,Ho,Home.
+Sheinwoodian,Stage,Black,#BFE6C3,430.6,432.9,Sh,Shei.
+Wenlock,Series,Black,#B3E1C2,426.7,432.9,We,Wenl.
+Telychian,Stage,Black,#BFE6CF,432.9,438.6,Te,Tely.
+Aeronian,Stage,Black,#B3E1C2,438.6,440.5,Ae,Aero.
+Rhuddanian,Stage,Black,#A6DCB5,440.5,443.1,Rh,Rhud.
+Llandovery,Series,Black,#99D7B3,432.9,443.1,Ll,Llan.
+Silurian,System,Black,#B3E1B6,419.62,443.1,Si,Silu.
+Hirnantian,Stage,Black,#A6DBAB,443.1,445.2,Hi,Hirn.
+Katian,Stage,Black,#99D69F,445.2,452.8,Ka,Kati.
+Sandbian,Stage,Black,#8CD094,452.8,458.2,Sa,Sand.
+Upper Ordovician,Series,Black,#7FCA93,443.1,458.2,Up,U. Ordo
+Darriwilian,Stage,White,#74C69C,458.2,469.4,Da,Darr.
+Dapingian,Stage,White,#66C092,469.4,471.3,Da,Dapi.
+Middle Ordovician,Series,White,#4DB47E,458.2,471.3,Mi,M. Ordo
+Floian,Stage,White,#41B087,471.3,477.1,Fl,Floi.
+Tremadocian,Stage,White,#33A97E,477.1,486.85,Tr,Trem.
+Lower Ordovician,Series,White,#1A9D6F,471.3,486.85,Lo,L. Ordo
+Ordovician,System,White,#009270,443.1,486.85,Or,Ordo.
+Stage 10,Stage,Black,#E6F5C9,486.85,491,St,Stag.
+Jiangshanian,Stage,Black,#D9F0BB,491,494.2,Ji,J. Jiangshan
+Paibian,Stage,Black,#CCEBAE,494.2,497,Pa,Paib.
+Furongian,Series,Black,#B3E095,486.85,497,Fu,Furo.
+Guzhangian,Stage,Black,#CCDFAA,497,500.5,Gu,Guzh.
+Drumian,Stage,Black,#BFD99D,500.5,504.5,Dr,Drum.
+Wuliuan,Stage,Black,#B3D492,504.5,506.5,Wu,Wuli.
+Miaolingian,Series,Black,#A6CF86,497,506.5,Mi,Miao.
+Stage 4,Stage,Black,#B3CA8E,506.5,514.5,St,S. St
+Stage 3,Stage,Black,#A6C583,514.5,521,St,Stag.
+Series 2,Series,Black,#99C078,506.5,521,Se,Seri.
+Stage 2,Stage,Black,#A6BA80,521,529,St,Stag.
+Fortunian,Stage,Black,#99B575,529,538.8,Fo,Fort.
+Terreneuvian,Series,Black,#8CB06C,521,538.8,Te,Terr.
+Cambrian,System,White,#7FA056,486.85,538.8,_,Camb.
+Paleozoic,Erathem,Black,#99C08D,251.902,538.8,|,Pale.
+Phanerozoic,Eonothem,Black,#9AD9DD,0,538.8,Ph,Phan.
+Ediacaran,System,Black,#FED96A,538.8,635,Ed,Edia.
+Cryogenian,System,Black,#FECC5C,635,720,Cr,Cryo.
+Tonian,System,Black,#FEBF4E,720,1000,To,Toni.
+Neoproterozoic,Erathem,Black,#FEB342,538.8,1000,Ne,Neop.
+Stenian,System,Black,#FED99A,1000,1200,St,Sten.
+Ectasian,System,Black,#FDCC8A,1200,1400,Ec,Ecta.
+Calymmian,System,Black,#FDC07A,1400,1600,Ca,Caly.
+Mesoproterozoic,Erathem,Black,#FDB462,1000,1600,Me,Meso.
+Statherian,System,Black,#F875A7,1600,1800,St,Stat.
+Orosirian,System,Black,#F76898,1800,2050,Or,Oros.
+Rhyacian,System,Black,#F75B89,2050,2300,Rh,Rhya.
+Siderian,System,Black,#F74F7C,2300,2500,Si,S. Sid
+Paleoproterozoic,Erathem,Black,#F74370,1600,2500,Pa,Pale.
+Proterozoic,Eonothem,Black,#F73563,538.8,2500,Pr,Prot.
+,System,Black,#FAA7C8,2500,2800,,
+Neoarchean,Erathem,Black,#F99BC1,2500,2800,Ne,Neoa.
+,System,Black,#F881B5,2800,3200,,
+Mesoarchean,Erathem,Black,#F768A9,2800,3200,Me,Meso.
+,System,Black,#F668B2,3200,3600,,
+Paleoarchean,Erathem,Black,#F4449F,3200,3600,Pa,Pale.
+,System,Black,#E61D8C,3600,4031,,
+Eoarchean,Erathem,Black,#DA037F,3600,4031,Eo,Eoar.
+Archean,Eonothem,Black,#F0047F,2500,4031,Ar,Arch.
+Hadean,Eonothem,White,#AE027E,4031,4567,Ha,Hade.
+Precambrian,super-Eonothem,Black,#F74370,538.8,4567,Pr,Prec.

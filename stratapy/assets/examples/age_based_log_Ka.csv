@@ -1,0 +1,5 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+0,fine gravel*,,cb,c,convex,.1,607*;607*,,normal grading;cross bedding,
+6,608*,,f,f,,.1,,,bioturbation medium;planar crossbedding,
+8,coarse gravel*,,p,f,convex,.1,,,/bivalve,
+10,609,5,f,f,,,,garnet,planar crossbedding;bioturbation high,

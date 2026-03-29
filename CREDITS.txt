@@ -1,0 +1,13 @@
+ACKNOWLEDGMENTS & DEPENDENCIES
+
+This package is built upon the following open-source projects. We are grateful to their contributors for making this work possible:
+
+- Matplotlib (Matplotlib/PSF License)
+- NumPy (BSD 3-Clause License)
+- Pandas (BSD 3-Clause License)
+- Shapely (BSD 3-Clause License)
+- Pillow (HPND License)
+- Platformdirs (MIT License)
+- SciPy (BSD 3-Clause License)
+
+This package is licensed under the BSD 3-Clause License. See LICENSE.txt for details.

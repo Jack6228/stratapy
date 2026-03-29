@@ -1,0 +1,7 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+2.5,607*,,vc,f,,,,,planar laminations,gradational
+2.15,601*,,p,vc,,0.03;0.5,,glauconite,clasts
+1.6,643*,,c,c,convex,0.15;0.65,
+1.2,651*,,m,m,,0.05;0.2,,,radiolarian
+0.6,602*,,b,cb,concave,0.03;0.4,601*,,rip up clasts;shell hash
+0.42,721,0.42,b,b,,,,

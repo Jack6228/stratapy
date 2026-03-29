@@ -1,0 +1,15 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+0,601,,cb,cb,,0.03,,,,
+-0.5,617,,silt,silt,,0.02,,,climbing ripples,
+-0.75,603,,p,vc,,0.01;0.8,,,,
+-0.9,617,,silt,silt,,0.02,,,climbing ripples; trough crossbedding; rip up clasts;,
+-1.1,610,,m,f,,0.01,,,bioturbation medium; shell hash,
+-1.6,603,,p,m,,0.01,,,,
+-2,613,,m,f,,0.03;0.5,602,,bioturbation high; shell hash,
+-2.6,603,,vc,m,,0.01,,,,
+-2.9,602,,p,p,,0.01,602,,,
+-3.1,613,,f,vf,,0.03;0.5,,,bioturbation medium; shell hash,gradational
+-4,603,,vc,f,,0.03,,,clast imbrication; /bivalve; clasts,
+-4.3,602,,cb,cb,,0.04;0.5,610,,,
+-4.7,610,,f,vf,,0.01;0.8,,,bioturbation_high; cross bedding,gradational
+-5.4,626,0.6,p,vc,,,,,shell hash; clast imbrication,

@@ -1,0 +1,28 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+8,aeolianite,,m,m
+5,packstone,,m,m
+4.85,crossbedded limestone,,m,3.75,
+4.55,crossbedded limestone,,m,m,^
+4.45,packstone,,m,m
+4.25,crossbedded limestone,,m,3.75
+4,crossbedded limestone,,m,m,^
+3.95,packstone,,m,m
+3.8,crossbedded limestone,,m,3.75
+3.55,crossbedded limestone,,m,m,^
+3.45,packstone,,m,m
+3.25,crossbedded limestone,,m,3.75
+3.05,crossbedded limestone,,m,m,^
+2.95,packstone,,m,m
+2.8,crossbedded limestone,,m,3.75
+2.6,crossbedded limestone,,m,m,^
+2.5,conglomerate,,p,p
+2.25,limestone,,3.6,3.6
+1.9,marl,,f,f
+1.87,limestone,,3.6,3.6
+1.58,marl,,f,f
+1.54,limestone,,3.6,3.6
+1.3,marl,,f,f
+1.13,limestone,,3.6,3.6
+1.06,marl,,f,f
+0.95,limestone,,3.6,3.6
+0.9,limestone,0.9,f,f

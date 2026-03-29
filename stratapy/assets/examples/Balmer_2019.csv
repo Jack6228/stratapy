@@ -1,0 +1,17 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+4.5,packstone,,4.75,4.75,,,,,bivalve;gastropod;/bivalve;scaphopod;
+1.8,packstone,,4.75,4.75,,,,,planar crossbedding
+1.6,packstone,,4.75,4.75,,0.05,,,rip up clasts
+1.4,marl,,clay,clay,,,,,/bivalve
+1.3,marl,,clay,clay,,,,,/bivalve
+1.18,marl,,vf,clay,^
+1.08,packstone,,vc,vc
+1,marl,,clay,clay,,,,,/bivalve
+0.94,marl,,vf,clay,concave
+0.89,packstone,,vc,m,,,,,bivalve
+0.8,marl,,clay,clay,,,,,planar laminations
+0.65,packstone,,f,clay
+0.55,marl,,clay,clay
+0.42,marl,,silt,clay,concave
+0.37,packstone,,c,c,,,,,planar laminations;bivalve
+0.24,marl,0.24,clay,clay

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as follows."
+authors:
+  - family-names: "Lee Smith"
+    given-names: "Jack"
+    orcid: "https://orcid.org/0000-0002-2935-625X"
+    affiliation: "University of Edinburgh"
+  - family-names: "Antoniou"
+    given-names: "Christina"
+    orcid: "https://orcid.org/0009-0001-8792-1966"
+    affiliation: "University of Edinburgh"
+  - family-names: "Alexander"
+    given-names: "Ruaridh"
+    orcid: "https://orcid.org/0009-0007-3269-3357"
+    affiliation: "University of Edinburgh"
+title: "stratapy: A Tool for Automated Stratigraphic Log Visualisation"
+abstract: "Stratigraphic logs are the fundamental interface between geological observations and scientific interpretation. Manual log visualisation is time-consuming and difficult to reproduce, yet existing digitisation tools are limited and often tailored to specific fields and applications, with many unable to provide core functions. We present stratapy: a Python package for rapid, high-quality log digitisation, designed to be accessible for non-programmers. The tool enables scientists across a range of disciplines to rapidly generate publication-quality stratigraphic logs with basic text- or spreadsheet-based inputs while remaining highly and easily customisable in both style and function. Stratapy incorporates standardised lithological patterns and curated geological symbology, as well as multi-figure functionality for tailored visualisations. With applications across research and industry, we create a standardised framework for log illustration and digitisation. This tool will modernise scientific workflows, improving the quality of stratigraphic logs and their interpretation, while contributing towards improved digital practices in the Earth sciences."
+keywords:
+  - stratigraphy
+  - geology
+  - python
+  - logging
+version: 0.9.0
+doi: 
+date-released: 2026-03-29
+repository-code: "https://github.com/Jack6228/stratapy"
+license: "BSD-3-Clause"
+url: "https://stratapy.readthedocs.io/en/latest/"

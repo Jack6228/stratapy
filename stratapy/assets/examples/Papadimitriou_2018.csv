@@ -1,0 +1,10 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+0,bioclastic,,4,4,,0.5
+6,evaporites,2,4,4,,0.5
+9,shallowandreef,,4,4,,0.5
+22,marly,,4,4,,0.5
+30,pelagicchalk,,4,4
+53,pelagicchert,9,4,4
+62,marls,,4,4,,0.5
+72,sandstone,2,4,4,,0.5
+75,ophiolite,5,4,4,,,,

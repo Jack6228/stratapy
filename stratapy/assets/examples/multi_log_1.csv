@@ -1,0 +1,9 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+0,fine gravel,,cb,p,concave,0.05;0.5,601,,clasts,gradational
+-0.3,607,,f,f,,,,,,
+-0.6,607,,c,f,concave,,,,clasts,
+-1,607,,f,c,concave,0.02,,,,gradational
+-1.3,610,,f,f,sawtooth,,,,planar laminations,
+-2.1,610,,f,f,sawtooth,0.05;0.5,,,normal grading;,gradational
+-2.5,603,,m,m,sawtooth,,,,,
+-2.78,603,1.07,m,m,sawtooth,,,,clast imbrication,

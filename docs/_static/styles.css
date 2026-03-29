@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* --- Variables and Imports --- */
+:root {
+    --light: #F0EEEC;
+    --dark: #3C4750;
+    --medium: #F8F8F8;
+    --primary-accent: #E9800A;
+    --secondary-accent: #FCB001;
+    --text-color: #0e7366;
+    --text-inactive: #787878;
+
+    /* Colour of tabs in tab-set entries */
+    --sd-color-tabs-label-active: var(--primary-accent);
+    /* var(--secondary-accent); */
+    --sd-color-tabs-underline-active: var(--text-color);
+    --sd-color-tabs-label-hover: var(--text-color);
+    --sd-color-tabs-underline-hover: darkslategray;
+    --sd-color-tabs-label-inactive: var(--text-inactive);
+    --sd-color-tabs-underline-inactive: transparent;
+}    
+
+/* --- Global and Typography --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* Page headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Figtree', sans-serif;
+    color: var(--primary-accent);
+}
+
+/* Normal Paragraph Text */
+p, .rst-content {
+    color: #333;
+}
+
+/* Subheadings / Captions */
+.caption-text, span.caption-text {
+    color: var(--primary-accent);
+}
+
+/* Rubric should look like h1 */
+.rubric {
+    font-family: 'Figtree', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    color: var(--primary-accent);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Highlighted search term */
+.highlighted {
+    background: var(--secondary-accent);
+    color: #333;
+}
+
+/* Left border of epigraphs */
+.epigraph {
+    border-left: 4px solid var(--primary-accent);
+    padding-left: 1em;
+    margin-left: 0;
+    color: var(--dark);
+}
+
+/* Code blocks */
+.rst-content code, .rst-content tt {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* Sphinx-Design tab text font */
+.sd-tab-set > label {
+    font-family: 'Figtree', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* --- ReadTheDocs Theme Overrides (Sidebar & Nav) --- */
+
+/* Set the colour of the home icon in wy-breadcrumbs */
+.wy-breadcrumbs a.icon-home {
+    color: var(--primary-accent);
+}
+/* Replace breadcrumb home icon (RTD theme) */
+.wy-breadcrumbs a.icon-home::before {
+    font-weight: 900;
+}
+
+/* Main content background */
+.wy-nav-content {
+    background: var(--light);
+    max-width: 90%;
+}
+
+/* Mobile top header bar (default blue) */
+.wy-nav-top {
+    background: var(--dark) !important;   /* pick your color */
+    color: #fff;
+}
+
+/* Optional: hamburger + home icon color */
+.wy-nav-top a,
+.wy-nav-top i {
+    color: #fff !important;
+}
+
+/* Sidebar toctree captions */
+.wy-menu-vertical .caption-text,
+.wy-menu-vertical p.caption {
+    font-family: 'Figtree', sans-serif;
+}
+
+/* Toctree captions printed in page content */
+.toctree-wrapper .caption-text,
+.rst-content .toctree-wrapper p.caption {
+    font-family: 'Figtree', sans-serif;
+}
+
+/* Sidebar background */
+.wy-nav-side, .wy-menu-vertical {
+    background: var(--dark);
+}
+
+/* Upper left logo box */
+.wy-side-nav-search {
+    background: var(--secondary-accent);
+    color: var(--dark);
+}
+
+.wy-menu-vertical a:hover {
+    color: var(--dark);
+    background: var(--secondary-accent);
+}
+
+.wy-menu-vertical li.current > a {
+    /* Text color */
+    background: var(--light);
+}
+
+/* Sidebar section headings */
+.wy-menu-vertical header, .wy-menu-vertical .caption-text {
+    color: var(--primary-accent);
+}
+
+/* --- Admonitions (Notes, Warnings, etc.) --- */
+
+/* Default Admonition styling - Fallback/General */
+.admonition, .note, .attention, .warning, .seealso {
+    background: #f7f7f7;
+    border-left: 4px solid var(--primary-accent);
+}
+
+/* Apply rounded styling to ALL Admonition box types */
+.admonition, .note, .attention, .warning, .seealso, .danger, .tip, .hint, .important, .caution {
+    color: var(--dark);
+    border-radius: 10px; /* Apply rounded corners */
+    border: 0;
+}
+
+/* Specific styling for all admonition title bars */
+/* Targets all boxes that should have the custom rounded title bar look */
+.admonition.note .admonition-title,
+.note .admonition-title,
+.admonition.attention .admonition-title,
+.attention .admonition-title,
+.admonition.warning .admonition-title,
+.warning .admonition-title,
+.admonition.seealso .admonition-title,
+.seealso .admonition-title,
+.tip .admonition-title {
+    color: var(--dark);
+    font-family: 'Figtree', sans-serif;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* Background for specific types of admonitions */
+.admonition.note, .note {
+    background: var(--medium);
+}
+.admonition.attention, .attention {
+    background: var(--medium);
+    /* border: 2px solid red; */
+}
+
+/* Title bar background for specific types */
+.admonition.note .admonition-title,
+.note .admonition-title {
+    background: var(--secondary-accent); /* Note title bar color */
+}
+.admonition.attention .admonition-title,
+.attention .admonition-title {
+    color: white;
+    background: red; /* Attention title bar color */
+}
+
+
+/* --- SD Cards and Tab Sections --- */
+
+/* Custom card appearance */
+.sd-card {
+    background: var(--medium);
+    border: 2px solid var(--primary-accent);
+    border-radius: 10px;
+    padding-left: .5rem;
+    transition: ease-in-out 0.3s;
+}
+
+.sd-card:hover {
+    background-color: var(--light);
+    border-color: var(--dark);
+}
+
+.sd-card-title {
+    font-family: 'Figtree', sans-serif;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: larger;
+}
+.sd-card-text {
+    color: var(--dark);
+    font-size: medium;
+}
+
+/* Style the tab labels */
+.sd-tab-set > label {
+    padding-top: 0;
+    transition: ease-in-out 0.2s;
+}
+
+/* Style the tab content area */
+.sd-tab-content {
+    background: var(--medium);
+    border-radius: 0 0 8px 8px;
+    padding: 1em 1.5em;
+    color: var(--dark);
+}
+
+/* --- Tables --- */
+
+/* Table header */
+.rst-content table.docutils th {
+    background: var(--primary-accent);
+    color: #fff;
+}
+
+/* Table row */
+.rst-content table.docutils td {
+    background: #fff;
+    color: #333;
+}
+
+/* --- Buttons --- */
+
+/* Custom button styling for download links */
+a.download {
+    background: var(--primary-accent);
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+a.download:hover {
+    background: var(--secondary-accent);
+    color: var(--dark);
+    border-color: var(--primary-accent);
+}

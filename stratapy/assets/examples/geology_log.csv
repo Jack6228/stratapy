@@ -1,0 +1,5 @@
+﻿height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+50,mudstone*,,clay,clay,,,,,,gradational
+45,siltstone*,,silt,silt,,,,pyrite,climbing ripples,gradational
+35,interbedded sandstone and siltstone*,,gravel,4.5,,1,,,,
+20,massive sandstone*,20,gravel,3,,,,quartz;k-feldspar,rip up clasts,

@@ -1,0 +1,13 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+300,grainstone,,15,15
+278,grainstone,,12,12
+272,laminite,,12,12
+214,grainstone,,15,15
+169,reef,,14.5,14.5
+160,grainstone,,15,15,,,,,shell hash
+115,reef,,14,14
+106,grainstone,,15,15
+100,reef,,14,14
+81,grainstone,,15,15
+78,reef,,14,14,,,,,shell hash
+65,grainstone,65,15,15

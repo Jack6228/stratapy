@@ -1,0 +1,9 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+3.19,aeolianite,,f,f,,,,,rhizolith;planar crossbedding,
+2.3,aeolianite,,c,c,,,,,clasts;shell hash,gradational
+2.15,conglomerate,,6.7,6.7,convex,,,,clasts,
+2,conglomerate,,6.7,6.7,concave,,,,clasts;bivalve,
+1.85,conglomerate,,6.7,6.7,convex,0.07;.9,,,clasts;bivalve;clasts,
+1.7,limestone,,cb,cb,,,,,bivalve;gastropod,
+1.35,conglomerate,,6.5,6.1,,0.04;1.5,,,shell hash;bivalve;clasts,
+1,chalk,1,silt,silt,,,,,,

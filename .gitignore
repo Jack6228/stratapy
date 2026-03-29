@@ -1,0 +1,17 @@
+# Common Python packaging ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+docs/build/
+docs/_build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+*.bat
+temp_vis.py
