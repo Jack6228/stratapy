@@ -190,8 +190,8 @@ class PlottingHelp:
         # Combine points in the correct order to complete the polygon (depending on the sine wave direction)
         # Tag each point with its side
         tagged_bottom = [(x, y, 'bottom') for x, y in xy_bottom[::-1]]
-        tagged_left   = [(x, y, 'left')   for x, y in xy_left]
         tagged_top    = [(x, y, 'top')    for x, y in xy_top]
+        tagged_left   = [(x, y, 'left')   for x, y in xy_left]
         tagged_right  = [(x, y, 'right')  for x, y in xy_right]
 
         # Combine all points
@@ -552,6 +552,10 @@ class PlottingHelp:
         if self.y_mode in ['depth', 'age']:
             top, bottom = sorted([top, bottom])  # Ensure top is always greater than bottom
         extent = (left, right, bottom, top)
+
+        # If the y_mode of the log is depth, then the y-axis is inverted, so account for this
+        if self.y_mode in ['depth', 'age']:
+            extent = (left, right, top, bottom)
 
         # Create a 2D array with 1's along the diagonal and 0's elsewhere
         if broken:

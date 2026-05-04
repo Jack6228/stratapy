@@ -60,7 +60,6 @@ class SetupFormatting:
 
         # Also create global font sizes
         self.fontsizes = {
-            'title': 14,
             'x_axis_label': 14,
             'y_axis_label': 14,
             'x_tick_labels': 12.8,

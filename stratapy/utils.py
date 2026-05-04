@@ -787,7 +787,7 @@ def parse_params(params: dict) -> dict:
         if preset == 'volcanic':
             result['x_ticks_dict'] = {'vf': 1, 'f': 1.5, 'm': 2, 'c': 2.5, 'f^': 3, 'm^': 3.5, 'c^': 4, 'block/bomb': 5}
         elif preset == 'geological':
-            result['x_ticks_dict'] = {'clay': 1, 'silt': 1.5, 'sand': 2.5, 'gravel': 4, 'cobble': 5, 'boulder': 6}
+            result['x_ticks_dict'] = {'clay': 1, 'silt': 1.5, 'sand': 2.5, 'gravel': 4}
         else:  # sedimentary
             result['x_ticks_dict'] = {'clay': 1, 'silt': 2, 'vf': 3, 'f': 3.5, 'm': 4, 'c': 4.5, 'vc': 5, 'p': 6, 'cb': 6.5, 'b': 7.5}
     
@@ -798,14 +798,11 @@ def parse_params(params: dict) -> dict:
             preset = 'sedimentary'
             result['grain_preset'] = preset
         if preset == 'volcanic':
-            # result['grain_brackets'] = {'ash': ['vf', 'c'], 'lapilli': ['f^', 'c^']}
             result['grain_brackets'] = {'ash': [1, 2.5], 'lapilli': [3, 4]}
         elif preset == 'geological':
-            # result['grain_brackets'] = {'fine': [1, 1.5], 'medium': [2.5], 'coarse': [4, 6]}
             result['grain_brackets'] = {}
         else:  # sedimentary
-            # result['grain_brackets'] = {'sand': ['vf', 'vc'], 'gravel': ['p', 'cb']}
-            result['grain_brackets'] = {'sand': [3, 5], 'gravel': [6, 6.5]}
+            result['grain_brackets'] = {'sand': [3, 5], 'gravel': [6, 7.5]}
 
     # Validation logic for LogObject.plot() parameters
     # fig must be None or a matplotlib figure object

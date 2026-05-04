@@ -60,7 +60,7 @@ Citing stratapy
 
 .. epigraph::
 
-   Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.1). Zenodo. https://doi.org/10.5281/zenodo.19320013
+   Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.2). Zenodo. https://doi.org/10.5281/zenodo.19320013
 
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.19320013.svg
    :alt: DOI badge
@@ -74,7 +74,7 @@ Citing stratapy
    month        = mar,
    year         = 2026,
    publisher    = {Zenodo},
-   version      = {v0.9.1},
+   version      = {v0.9.2},
    doi          = {10.5281/zenodo.19320013},
    url          = {https://doi.org/10.5281/zenodo.19320013},
    }

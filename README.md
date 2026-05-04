@@ -13,7 +13,7 @@ A Python-based framework for automated visualisation of creating standardised, r
 [![PyPI](https://img.shields.io/badge/PyPI-stratapy-FCB001?logo=pypi)](https://pypi.org/project/stratapy/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19320013-blue)](https://doi.org/10.5281/zenodo.19320013)
 [![Docs](https://img.shields.io/badge/ReadTheDocs-latest-8ca1af?logo=readthedocs)](https://stratapy.readthedocs.io/en/latest/?badge=latest)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/ManuscriptFigures.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/Tutorial.ipynb)
 
 ## Key Features
 
@@ -35,7 +35,7 @@ A Python-based framework for automated visualisation of creating standardised, r
     </picture>
 </div>
 
-For more examples, see the [documentation](https://stratapy.readthedocs.io/en/latest/) or try it out online with this [Google Colab notebook](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/ManuscriptFigures.ipynb).
+For more examples, see the [documentation](https://stratapy.readthedocs.io/en/latest/) or try it out online with this [Google Colab tutorial notebook](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/Tutorial.ipynb).
 
 ## Quick Start
 
@@ -69,7 +69,7 @@ panel.save('output.png')
 
 ### Use Online - No Installation Required
 
-Try out stratapy immediately without any installation using this [Google Colab notebook](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/ManuscriptFigures.ipynb).
+Try out stratapy immediately without any installation using this [Google Colab tutorial notebook](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/Tutorial.ipynb).
 
 See the [Online Platforms](https://stratapy.readthedocs.io/en/latest/getting_started/installation/online_platforms.html) section of the documentation for more details.
 
@@ -81,7 +81,7 @@ For full API reference and tutorials, visit [our ReadTheDocs page](https://strat
 
 If you use this software in your research or otherwise, please cite it as follows:
 
-> Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.1). Zenodo. https://doi.org/10.5281/zenodo.19320013
+> Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.2). Zenodo. https://doi.org/10.5281/zenodo.19320013
 
 For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the following BibTeX entry:
 
@@ -92,7 +92,7 @@ For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the fo
   month        = mar,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v0.9.1},
+  version      = {v0.9.2},
   doi          = {10.5281/zenodo.19320013},
   url          = {https://doi.org/10.5281/zenodo.19320013},
 }

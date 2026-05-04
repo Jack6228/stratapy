@@ -87,16 +87,10 @@ The following presets are available:
           - clay
           - silt
           - sand
-          - gravel
-          - cobble
-          - boulder
         * - value
           - 1
           - 1.5
           - 2.5
-          - 4
-          - 5
-          - 6
 
       .. image:: ../../_static/reference/axes_geological.png
           :alt: Geological grain sizes

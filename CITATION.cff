@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as follows."
 authors:
-  - family-names: "Smith"
-    given-names: "Jack Lee"
+  - family-names: "Lee Smith"
+    given-names: "Jack"
     orcid: "https://orcid.org/0000-0002-2935-625X"
     affiliation: "University of Edinburgh"
   - family-names: "Antoniou"
@@ -20,9 +20,9 @@ keywords:
   - geology
   - python
   - logging
-version: 0.9.1
+version: 0.9.2
 doi: "10.5281/zenodo.19320013"
-date-released: 2026-03-29
+date-released: 2026-05-04
 repository-code: "https://github.com/Jack6228/stratapy"
 license: "BSD-3-Clause"
 url: "https://stratapy.readthedocs.io/en/latest/"

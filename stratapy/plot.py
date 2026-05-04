@@ -378,10 +378,25 @@ def create_log(helper : object, fig, ax, override_ylims, share_legend) -> tuple[
                 
                 # If found, reconstruct the polygon with smoothed right edge
                 if right_start_idx is not None and right_end_idx is not None:
-                    if right_start_idx < right_end_idx:
-                        new_points = concatenate([all_points[:right_start_idx], combined_right, all_points[right_end_idx:]])
+                    if helper.y_mode == 'depth':
+                        # In depth or age mode, reverse the smoothed right edge to maintain clockwise point order before concatenation
+                        if right_start_idx < right_end_idx:
+                            new_points = concatenate([
+                                all_points[right_start_idx:right_end_idx + 1],
+                                combined_right[::-1]
+                            ])
+                        else:
+                            new_points = concatenate([
+                                all_points[right_start_idx:],
+                                all_points[:right_end_idx + 1],
+                                combined_right[::-1]
+                            ])
                     else:
-                        new_points = concatenate([all_points[:right_end_idx], combined_right[::-1], all_points[right_start_idx:]])
+                        # In normal height mode, concatenate in the correct order based on the indices
+                        if right_start_idx < right_end_idx:
+                            new_points = concatenate([all_points[:right_start_idx], combined_right, all_points[right_end_idx:]])
+                        else:
+                            new_points = concatenate([all_points[:right_end_idx], combined_right[::-1], all_points[right_start_idx:]])
                     comb_points = new_points
                 else:
                     comb_points = all_points
@@ -419,10 +434,13 @@ def create_log(helper : object, fig, ax, override_ylims, share_legend) -> tuple[
                 plot_efficient_line(ax, geom_b[4][:, 0], geom_b[4][:, 1], color='k', lw=helper.border_lw, ls='solid', zord=zord)
             plot_upper_border = True
 
-        # if r>0:
-        #     print(helper.df.iloc[r]['height/age'], helper.df.iloc[r-1]['height/age'] + helper.df.iloc[r-1]['thickness'], helper.df.iloc[r-1].thickness)
-        if (r > 0 and helper.df.iloc[r]['height/age'] != helper.df.iloc[r-1]['height/age'] + helper.df.iloc[r-1]['thickness'] and helper.unit_borders):
-            # print(f"drawing border at bottom of unit {r} ({helper.df.iloc[r]['height/age']}) at y={previous_bottom[:, 1][0]}")
+        if (r > 0
+            and helper.unit_borders
+            and row['rock'] != helper.df.iloc[r-1]['rock']
+            and not allclose(
+                helper.df.iloc[r]['height/age'],
+                helper.df.iloc[r-1]['height/age'] + helper.df.iloc[r-1]['thickness']
+            ) ):
             # If there is a gap between units, plot the bottom border of the previous unit to close the gap
             ax.plot(previous_bottom[:, 0], previous_bottom[:, 1], color='k', lw=helper.border_lw, ls='solid', zorder=helper.zorder_borders, clip_on=False)
         

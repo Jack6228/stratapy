@@ -42,17 +42,11 @@ They enable rapid enhancement of your logs with commonly used features without n
 
 .. grid:: 2
 
-     .. grid-item-card:: Trend Arrows
-        :link: trends.html
-        :link-type: url
+   .. grid-item-card:: Trend Arrows
+      :link: trends.html
+      :link-type: url
    
-         Use arrows to indicate trends on your logs
-
-     .. grid-item-card:: ...
-        :link: twin_y_axis.html
-        :link-type: url
-
-         ...
+       Use arrows to indicate trends on your logs
 
 .. toctree::
    :maxdepth: 1

@@ -499,7 +499,7 @@ class LogObject:
         triangle = Polygon(triangle_coords, closed=True, facecolor=fill_color, edgecolor=edge_color, linewidth=linewidth)
         self.ax.add_patch(triangle)
 
-    def save(self, filename='./stratapy_output.png', transparent=False) -> None:
+    def save(self, filename='./stratapy_output', transparent=False) -> None:
         """
         Saves the current figure to a file. The filename should include the desired file extension (e.g., .png, .jpg, .pdf, .svg). If no extension is provided, it defaults to .png. 
 
@@ -528,11 +528,16 @@ class LogObject:
         from matplotlib.pyplot import savefig, close
 
         # Ensure the fig_filename has the correct extension
-        valid_extensions = self.fig.canvas.get_supported_filetypes().keys()
-        # Check if filename ends with any valid extension
-        if not any(filename.endswith(f'.{ext}') for ext in valid_extensions):
-            print(f"Extension '{filename.split('.')[-1]}' not supported, saving as PNG instead.")
-            filename += '.png'
+        valid = {ext.lower() for ext in self.fig.canvas.get_supported_filetypes().keys()}
+        root, ext = path.splitext(filename)  # ext includes leading '.' or is ''
+        if ext == '':
+            # no extension provided — silently use PNG
+            filename = filename + '.png'
+        else:
+            # Check if the provided extension is valid (case-insensitive)
+            if ext.lstrip('.').lower() not in valid:
+                print(f"Extension '{ext.lstrip('.')}' not supported, saving as PNG instead.")
+                filename = root + '.png'
         
         # Save the figure
         savefig(filename, dpi=self.helper.dpi, transparent=transparent, bbox_inches='tight')
@@ -569,7 +574,7 @@ class MultiLogObject:
         self.logs = logs
         self.leg = leg
 
-    def save(self, filename='./stratapy_output.png', transparent=False) -> None:
+    def save(self, filename='./stratapy_output', transparent=False) -> None:
         """
         Saves the current figure to a file. The filename should include the desired file extension (e.g., .png, .jpg, .pdf, .svg). If no extension is provided, it defaults to .png.
 
@@ -598,11 +603,16 @@ class MultiLogObject:
         from matplotlib.pyplot import savefig, close
         
         # Ensure the fig_filename has the correct extension
-        valid_extensions = self.fig.canvas.get_supported_filetypes().keys()
-        # Check if filename ends with any valid extension
-        if not any(filename.endswith(f'.{ext}') for ext in valid_extensions):
-            print(f"Extension '{filename.split('.')[-1]}' not supported, saving as PNG instead.")
-            filename += '.png'
+        valid = {ext.lower() for ext in self.fig.canvas.get_supported_filetypes().keys()}
+        root, ext = path.splitext(filename)  # ext includes leading '.' or is ''
+        if ext == '':
+            # no extension provided — silently use PNG
+            filename = filename + '.png'
+        else:
+            # Check if the provided extension is valid (case-insensitive)
+            if ext.lstrip('.').lower() not in valid:
+                print(f"Extension '{ext.lstrip('.')}' not supported, saving as PNG instead.")
+                filename = root + '.png'
         
         # Save the figure
         savefig(filename, dpi=self.logs[0].helper.dpi, transparent=transparent, bbox_inches='tight')
@@ -719,11 +729,16 @@ def standalone_legend(files, dpi=300, transparent=True, filename='legend.png', l
     leg = merge_legends_and_create_legend(logs, ylims, fig)
     
     # Ensure the fig_filename has the correct extension
-    valid_extensions = fig.canvas.get_supported_filetypes().keys()
-    # Check if filename ends with any valid extension
-    if not any(filename.endswith(f'.{ext}') for ext in valid_extensions):
-        print(f"Extension '{filename.split('.')[-1]}' not supported, saving as PNG instead.")
-        filename += '.png'
+    valid = {ext.lower() for ext in fig.canvas.get_supported_filetypes().keys()}
+    root, ext = path.splitext(filename)  # ext includes leading '.' or is ''
+    if ext == '':
+        # no extension provided — silently use PNG
+        filename = filename + '.png'
+    else:
+        # Check if the provided extension is valid (case-insensitive)
+        if ext.lstrip('.').lower() not in valid:
+            print(f"Extension '{ext.lstrip('.')}' not supported, saving as PNG instead.")
+            filename = root + '.png'
 
     # Save only the legend region
     bbox = leg.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
@@ -1303,12 +1318,13 @@ def update_lithologies(patterns : dict) -> None:
                 cmap = LinearSegmentedColormap.from_list('custom_cmap_transparent', [(0,0,0,0), (0,0,0,1)], N=256)
                 formatting.lithologies[key] = ('pattern', value[0], cmap, str(value[2]))
                 added.append(key)
+            # If not a custom image, it must be a variation of an existing pattern
             else:
                 rock_names = [f[-1].lower() for f in formatting.lithologies.values()]   
                 # If a variation of an existing pattern, it must exist
-                if value[0] not in formatting.lithologies and value[0].lower() not in rock_names: 
+                if str(value[0]) not in formatting.lithologies and str(value[0]).lower() not in rock_names: 
                     # Tell user of closest match if exists
-                    closest_match = get_close_matches(value[0], rock_names, n=1, cutoff=0.6)
+                    closest_match = get_close_matches(str(value[0]), rock_names, n=1, cutoff=0.6)
                     if closest_match:
                         ignore.update({key: f"'{value[0]}' is not a valid existing lithology key, check the pattern spelling\n{''.join([' ']*(len(key)+6))}> did you mean '{closest_match[0]}'?"})
                         continue
@@ -1316,11 +1332,13 @@ def update_lithologies(patterns : dict) -> None:
                         ignore.update({key: f"'{value[0]}' is not a valid existing lithology key, check the pattern spelling."})
                         continue
                 else:
-                    # Assign key, depending on if it was a key or name
-                    if value[0].lower() not in formatting.lithologies.keys():
-                        existing_key = [key for key, val in formatting.lithologies.items() if val[-1].lower() == value[0].lower()][0]
+                    # Assign key, depending on if it was a key or name. Since a previous value exists, set the name to that
+                    if str(value[0]).lower() not in formatting.lithologies.keys():
+                        existing_key = [key for key, val in formatting.lithologies.items() if val[-1].lower() == str(value[0]).lower()][0]
+                        value = (value[0], value[1], formatting.lithologies[existing_key][-1] if value[2] == '' else value[2])
                     else:
-                        existing_key = value[0]
+                        existing_key = str(value[0])
+                        value = (value[0], value[1], formatting.lithologies[existing_key][-1] if value[2] == '' else value[2])
 
                 # Extract and validate colour
                 # If no cmap provided, assume white (default)
@@ -1425,7 +1443,13 @@ def update_features(new_features : dict) -> None:
             else:                
                 closest_match = get_close_matches(Fpath, formatting.features.keys(), n=1, cutoff=0.6)
 
-            missing.append(f"'{key}' : '{Fpath}' is not a valid filepath or existing feature name, check the filepath or feature spelling.{'\n'+''.join([' ']*(len(key)+7)) if closest_match else ' '}" + (f"> did you mean '{closest_match[0]}'?" if closest_match else "."))
+
+            newline_padding = f"\n{' ' * (len(key) + 7)}" if closest_match else " "
+            suggestion = f"> did you mean '{closest_match[0]}'?" if closest_match else "."
+            missing.append(
+                f"'{key}' : '{Fpath}' is not a valid filepath or existing feature name, "
+                f"check the filepath or feature spelling.{newline_padding}{suggestion}"
+            )
             continue
 
         # Assign a type if not provided

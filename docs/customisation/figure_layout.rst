@@ -79,12 +79,11 @@ Fonts and Font Size
     import stratapy as sp
     sp.formatting.fontsizes['x_axis_label'] = 14
 
-  Alternatively, you can use a dictionary to set multiple sizes at once; all of the available keys are shown below:
+  Alternatively, you can use a dictionary to set multiple sizes at once; all of the available keys and their default values are shown in the dictionary and figure below:
 
   .. code-block:: python
 
     sp.formatting.set_fontsizes({
-        'title': 14,
         'x_axis_label': 14,
         'y_axis_label': 14,
         'x_tick_labels': 12.8,
@@ -95,6 +94,10 @@ Fonts and Font Size
         'chronostratigraphy_periods': 11,
         'chronostratigraphy_labels': 12.8,
     })
+
+  .. image:: /_static/reference/AnnotatedFontsizeKeys.png
+    :alt: Annotated font size keys
+    :width: 65%
 
 Notes on Saving Figures
 -------------------------

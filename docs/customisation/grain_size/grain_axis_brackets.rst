@@ -11,7 +11,7 @@ This parameter has default values for all of the available grain size presets, w
 
         .. code-block:: python
 
-            grain_brackets = {'sand': [3, 5], 'gravel': [6, 6.5]}
+            grain_brackets = {'sand': [3, 5], 'gravel': [6, 7.5]}
             log = sp.load('tutorial.csv', grain_brackets=grain_brackets)
 
         .. image:: ../../_static/reference/axes_sedimentary.png
