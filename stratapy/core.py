@@ -747,7 +747,7 @@ def standalone_legend(files, dpi=300, transparent=True, filename='legend.png', l
     print(f"Legend saved to {filename}")
     close()
 
-def load(filepath : str, grain_preset : str = 'sedimentary', x_ticks_dict = None, grain_brackets = None) -> LogObject:
+def load(filepath : str, grain_preset : str = 'clastic', x_ticks_dict = None, grain_brackets = None) -> LogObject:
     """
     Reads in a file containing stratigraphic data and sets up the necessary variables for plotting. 
     
@@ -760,7 +760,7 @@ def load(filepath : str, grain_preset : str = 'sedimentary', x_ticks_dict = None
     filepath : str
         The path to the input file.
     grain_preset : str, optional
-        Various default collections of grain sizes are available for different disciplines. Each one automatically passes a different ``x_ticks_dict`` and ``grain_brackets`` to the function. Options are 'sedimentary' (default), 'volcanic', and 'geological'. Alternatively, you can provide your own ``x_ticks_dict`` and ``grain_brackets`` directly, in which case this parameter is ignored.
+        Various default collections of grain sizes are available for different disciplines. Each one automatically passes a different ``x_ticks_dict`` and ``grain_brackets`` to the function. Options are 'clastic' (default), 'volcanic', 'sedimentary', 'dunham', and 'clastic'. Alternatively, you can provide your own ``x_ticks_dict`` and ``grain_brackets`` directly, in which case this parameter is ignored.
         See `See the documentation <https://stratapy.readthedocs.io/en/latest/customisation/grain_size/index.html>`_ for details and examples of this functionality.
     x_ticks_dict : dict, optional
         A dictionary of x-tick labels and their corresponding values of grain size. Adjusting the labels and values will change where the x-ticks are placed on a log's x-axis. The labels should be unique strings; to have two separate labels for 'f' (e.g., 'f' for fine ash and 'f' for fine lapilli), suffix the string with any of [*, ^, &, _, £, $] to make it unique (these characters will be removed when displayed on the axis).
@@ -1118,6 +1118,82 @@ def multi_fig(files, nrows : int = 1, ncols : int = -1, sharey : bool = False, s
 
     # Return the figure, axes, logs, and legend in a MultiLogObject for easy access and saving
     return MultiLogObject(fig, axes, logs, leg)
+
+def update_contacts(contacts : dict) -> None:
+    """
+    Enables the formatting of existing minerals to be updated, or new minerals to be added to the package.
+
+            'erosional': (.75, 'solid', 'k', 'Erosional'),
+    Parameters
+    ----------
+    contacts : dict
+        A dictionary of the contacts to be added to the user's data in the format {key: (linewidth, linestyle, colour, label)}.
+        The linewidth is a numeric value for the width of the contact line; the linestyle can be any of the `matplotlib linestyles <https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html>`_; the colour can be RGB tuples, matplotlib color strings, or hex codes; the code will attempt to convert automatically.
+        The key is the name of the contact and it must not be an existing key; it is case sensitive, with the title case version used in the legend.
+        Shape is any of the `matplotlib markers <https://matplotlib.org/stable/api/markers_api.html>`_.
+
+    Examples
+    --------
+    >>> import stratapy as sp
+    >>> sp.update_contacts( {
+    >>>     # Magenta dashed line - new contact
+    >>>     'my_contact': (1, 'dashed', 'magenta', 'My Contact'),
+    >>>     # Orange dash-dot line - new contact
+    >>>     'another_contact': (1.5, 'dashdot', 'orange', 'Another Contact'),
+    >>> } )
+    """
+    from .utils import colour_to_rgba, is_valid_linestyle
+
+    # Ensure input is a dictionary
+    if not isinstance(contacts, dict):
+        print(f"Warning in 'update_contacts':  The input must be a dictionary of minerals, not {type(contacts).__name__}.  Please provide a dictionary in the format {{'contact_name': (linewidth, linestyle, colour, label)}}.")
+        return
+    
+    added, updated, ignore = [], [], {}
+    for key, value in contacts.items():
+        # Ensure input is in correct format
+        if type(contacts[key]) != tuple or len(contacts[key]) != 4:
+            ignore.update({key: 'Mineral must be a tuple of length 4.'})
+            continue
+        
+        # If default contact, it is not editable
+        if key in formatting.default_contacts.keys():
+            ignore.update({key: f"'{key}' is a default contact and cannot be changed. You can create a new contact using a new key instead."})
+            continue
+
+        new_lw, new_ls, new_colour, new_label = value
+
+        # Validate colour
+        try:
+            new_colour = colour_to_rgba(new_colour)
+        except Exception:
+            ignore.update({key: f"Fill colour '{new_colour}' must be a valid colour string or RGB tuple."})
+            continue
+
+        # Validate linewidth
+        if not isinstance(new_lw, (int, float)):
+            ignore.update({key: f"Linewidth '{new_lw}' must be a numeric value."})
+            continue
+
+        # Validate linestyle
+        if not is_valid_linestyle(new_ls):
+            ignore.update({key: f"Linestyle '{new_ls}' is not a valid matplotlib linestyle."})
+            continue
+
+        if key not in formatting.contact_types:
+            added.append(key)
+        else:
+            updated.append(key)
+
+        formatting.contact_types[key] = (new_lw, new_ls, new_colour, new_label)
+
+    # Print results
+    if added:
+        print("Contacts added for use: " + ", ".join([f"'{a}'" for a in added]))
+    if updated:
+        print("Contacts updated: " + ", ".join([f"'{u}'" for u in updated]))
+    if ignore:
+        print("Warning: The following requested contacts are not in the correct format and will not be added or updated:\n" + "\n".join([f"  > '{k}': {v}" for k, v in ignore.items()]))
 
 def update_minerals(minerals : dict) -> None:
     """

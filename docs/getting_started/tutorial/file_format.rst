@@ -1,7 +1,7 @@
 File Format
 ===========================
 
-Stratapy uses `CSV` (comma separated variable) formatted files to convert data into visualisations. Input files are accepted in various formats: ``.csv``, ``.txt``, and ``.xlsx``. You can make these files yourself, or an Excel template with selectable options can be downloaded **here**. [not yet available].
+stratapy uses `CSV` (comma separated variable) formatted files to convert data into visualisations. Input files are accepted in various formats: ``.csv``, ``.txt``, and ``.xlsx``. You can make these files yourself, or an Excel template with selectable options can be downloaded **here**. [not yet available].
 
 Files should contain rows for each unit to be displayed, with columns specifying various parameters for that unit. The table below lists all of the column types. At a minimum, the `height/age` and `rock` columns must be filled, but all others are optional. Further customisations to graphics beyond this input file can be specified later using stratapy itself.
 
@@ -54,8 +54,8 @@ Files should contain rows for each unit to be displayed, with columns specifying
       - Fossils or sedimentary structures present in a unit. Multiple features can be separated by semicolons (e.g., 'trilobite;coral').
     * - :ref:`contact`
       - erosional
-      - hard
-      - Type of contact on the bottom of the unit. Options include 'gradational', 'hard' or 'erosional'.
+      - sharp
+      - Type of contact on the bottom of the unit. Options include 'gradational', 'sharp' or 'erosional'.
 
 .. _height-age:
 
@@ -183,7 +183,7 @@ If fossils, or sedimentary/tectonic structures are present in a unit, they can b
 
 .. rubric:: contact
 
-To indicate types of contact between units, this column is used to indicate the formatting of the contact at the bottom of a unit. Available options are 'hard', 'gradational', or left blank for the default sharp contact.
+To indicate types of contact between units, this column is used to indicate the formatting of the contact at the bottom of a unit. Available options are 'sharp', 'gradational', or left blank for the default contact.
 
 Note that the 'erosional' contact type is created automatically when erosion is specified in the ``erosion`` column, and cannot be specified in this column.
 

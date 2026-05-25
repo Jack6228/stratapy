@@ -1,7 +1,7 @@
 Figure Layout
 =============
 
-This page describes how to control the appearance and layout of figures in Stratapy, including figure resolution, sizing, borders, transparency, fonts, and font size. These options help you create publication-quality stratigraphic plots tailored to your needs.
+This page describes how to control the appearance and layout of figures in stratapy, including figure resolution, sizing, borders, transparency, fonts, and font size. These options help you create publication-quality stratigraphic plots tailored to your needs.
 
 Figure Resolution
 -----------------
@@ -32,7 +32,7 @@ Figure Sizing
 
 - **Automatic sizing**:  
 
-  If not specified, Stratapy chooses a sensible default based on the number of logs and display mode.
+  If not specified, stratapy chooses a sensible default based on the number of logs and display mode.
 
 Borders and Spines
 ------------------
@@ -63,7 +63,7 @@ Fonts and Font Size
 
 - **Font family**:  
 
-  Stratapy uses the default Matplotlib font unless otherwise specified. To change, use matplotlib's rcParams before plotting:
+  stratapy uses the default Matplotlib font unless otherwise specified. To change, use matplotlib's rcParams before plotting:
 
     .. code-block:: python
 
@@ -72,7 +72,7 @@ Fonts and Font Size
 
 - **Font size**:  
 
-  Stratapy has an easy way to set font sizes for all types of text elements. Before plotting, you can set fonts using:
+  stratapy has an easy way to set font sizes for all types of text elements. Before plotting, you can set fonts using:
 
   .. code-block:: python
 
@@ -95,7 +95,7 @@ Fonts and Font Size
         'chronostratigraphy_labels': 12.8,
     })
 
-  .. image:: /_static/reference/AnnotatedFontsizeKeys.png
+  .. image:: ../../_static/reference/AnnotatedFontsizeKeys.png
     :alt: Annotated font size keys
     :width: 65%
 

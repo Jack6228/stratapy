@@ -10,7 +10,7 @@ Quick Links
 
 .. grid:: 2
 
-     .. grid-item-card:: What is Stratapy?
+     .. grid-item-card:: What is stratapy?
         :link: getting_started/what_is_stratapy.html
         :link-type: url
 
@@ -60,23 +60,23 @@ Citing stratapy
 
 .. epigraph::
 
-   Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.2). Zenodo. https://doi.org/10.5281/zenodo.19320013
+   Smith, et al. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.19320013.svg
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg
    :alt: DOI badge
-   :target: https://doi.org/10.5281/zenodo.19320013
+   :target: https://doi.org/10.5281/zenodo.XXXXXXX
 
 .. code-block:: none
 
    @software{smith_stratapy_2026,
-   author       = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
-   title        = {stratapy: A Tool for Automated Stratigraphic Log Visualisation},
-   month        = mar,
-   year         = 2026,
-   publisher    = {Zenodo},
-   version      = {v0.9.2},
-   doi          = {10.5281/zenodo.19320013},
-   url          = {https://doi.org/10.5281/zenodo.19320013},
+      author = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
+      title = {{stratapy: A Python tool for automated stratigraphic log visualisation}},
+      month = {3},
+      year = {2026},
+      publisher = {Zenodo},
+      version = {v0.9.0},
+      doi = {},
+      url = {https://github.com/Jack6228/stratapy}
    }
 
 |PyPI| |Docs| |Colab|

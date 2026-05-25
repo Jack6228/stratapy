@@ -1,7 +1,7 @@
 Log Layout
 ============================================
 
-Stratapy offers three different log layouts to suit different needs:
+stratapy offers three different log layouts to suit different needs:
 
 .. tab-set::
 

@@ -3,7 +3,7 @@ Tutorial
 
 This tutorial will guide you through the process of creating your first stratigraphic log figure using stratapy. By the end of this tutorial, you will have a basic understanding of how to load data, create a log, and customise its appearance.
 
-Stratapy reads data from text-based files (like a ``.csv`` file or a spreadsheet ``.xlsx`` file). This tutorial will walk through the format of this file (:doc:`file_format`) before showing you how to create the log below and customise it.
+stratapy reads data from text-based files (like a ``.csv`` file or a spreadsheet ``.xlsx`` file). This tutorial will walk through the format of this file (:doc:`file_format`) before showing you how to create the log below and customise it.
 
 .. Example files can be found at the bottom of this page, and the input files to reproduce all examples in this documentation are available in the :doc:`gallery <reference/gallery>`.
 
@@ -27,7 +27,7 @@ Stratapy reads data from text-based files (like a ``.csv`` file or a spreadsheet
    </div>   
 
 .. figure:: /_static/figures/Tutorial.png
-   :alt: Stratapy Log Diagram
+   :alt: stratapy Log Diagram
    :align: center
    :width: 60%
 

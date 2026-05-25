@@ -1,4 +1,4 @@
-What is Stratapy?
+What is stratapy?
 ================================
 
 stratapy is a Python package which enables quick generation and easy visualisation of sedimentary logs (i.e. cores or stratigraphic sections) using stratigraphic data across multiple disciplines i.e., geology, sedimentology, carbonates. It uses simple excel/csv/txt input files to plot stratigraphic columns, ideal for non-programmers. This package enables geoscientists to efficiently document, analyse, and interpret geological layers at both macro- and micro-scales for research, teaching, and any other purposes.

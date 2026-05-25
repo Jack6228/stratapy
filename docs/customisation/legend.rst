@@ -1,7 +1,7 @@
 Legend Customisation
 =======================================
 
-Stratapy provides flexible and powerful options for configuring the legend in your stratigraphic plots. The legend helps explain the meaning of lithologies, minerals, features, and contact types shown in your figure. This guide explains all the ways you can control the legend's appearance and content, both through high-level options and detailed keyword arguments.
+stratapy provides flexible and powerful options for configuring the legend in your stratigraphic plots. The legend helps explain the meaning of lithologies, minerals, features, and contact types shown in your figure. This guide explains all the ways you can control the legend's appearance and content, both through high-level options and detailed keyword arguments.
 
 The legend is split into sections for various categories, with entries in each section ordered alphabetically, except for the lithologies section, which is ordered chronologically, with oldest units/lenses at the bottom and youngest at the top, based on their first occurrence in the data.
 

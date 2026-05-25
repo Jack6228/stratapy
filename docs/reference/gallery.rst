@@ -32,7 +32,6 @@ Keywords: borehole logs, aligned logs, correlated logs
    :target: ../gallery/UKGeos.html
    :align: center
    :width: 600
-    
 
 .. rubric:: Tephrochronology
 

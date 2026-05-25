@@ -1,7 +1,7 @@
 Customisation Options
 ===================================
 
-Stratapy offers a vast range of customisation options to suit needs of users from different fields, and of different level of coding familiarity. This section is split into multiple sections, to help you find what you are looking for quickly, including but not limited to:
+stratapy offers a vast range of customisation options to suit needs of users from different fields, and of different level of coding familiarity. This section is split into multiple sections, to help you find what you are looking for quickly, including but not limited to:
 
 -   **Figure layout and sizing**: Adjusting the overall figure dimensions, quality, and more
 -   **Legends and labels**: Customising the appearance and content of legends and axes labels

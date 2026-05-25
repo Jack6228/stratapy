@@ -1,7 +1,7 @@
 Chronostratigraphy
 ====================================================
 
-Stratapy provides a convenient way to add a chronostratigraphic timescale alongside your stratigraphic log using the ``add_chronostratigraphy`` method of an already plotted log, allowing you to visually correlate your data with the official geological timescale.
+stratapy provides a convenient way to add a chronostratigraphic timescale alongside your stratigraphic log using the ``add_chronostratigraphy`` method of an already plotted log, allowing you to visually correlate your data with the official geological timescale.
 
 Usage
 -----
@@ -40,7 +40,7 @@ Requirements and Behaviour
 - The axis is added to the left of your existing log, and the y-axis labels/ticks are moved accordingly.
 
 .. note::
-  To add chronostratigraphy to a non-age-based log or to add it to a more complex figure, the :py:meth:`stratapy.core.chronostratigraphy` function can plot standalone chronostratigraphy, offering more control and flexibility, such as horizontal orientation and custom age ranges. See XXX for an example.
+  To add chronostratigraphy to a non-age-based log or to add it to a more complex figure, the :py:meth:`stratapy.core.chronostratigraphy` function can plot standalone chronostratigraphy, offering more control and flexibility, such as horizontal orientation and custom age ranges.
    
 Examples
 --------

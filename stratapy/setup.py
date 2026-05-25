@@ -24,6 +24,10 @@ class SetupFormatting:
         A dictionary of the contact types with their line styles and widths.
     default_lithologies : dict
         A dictionary of the default lithologies with their keys and names.
+    default_features : dict
+        A dictionary of the default features with their keys and names.
+    default_contacts : dict
+        A dictionary of the default contact types with their keys and names.
     direc : str
         The directory where the stratapy package is located (on the user's system).
     user_direc : str
@@ -57,6 +61,7 @@ class SetupFormatting:
         # Keep a list of the default values for reference when adding custom ones
         self.default_lithologies = {key: value[-1] for key, value in self.lithologies.items()}
         self.default_features = {key: value[-1] for key, value in self.features.items()}
+        self.default_contacts = {key: value[-1] for key, value in self.contact_types.items()}
 
         # Also create global font sizes
         self.fontsizes = {
@@ -410,7 +415,7 @@ class SetupFormatting:
         # Create the available contact types with tuple (linewidth, linestyle, color, name)
         contact_types = {
             '': (.75, 'solid', 'k', 'Normal'),
-            'hard': (1.75, 'solid', 'k', 'Sharp'),
+            'sharp': (1.75, 'solid', 'k', 'Sharp'),
             'gradational': (1.5, (0, (5, 3)), 'k', 'Gradational'),
             'erosional': (.75, 'solid', 'k', 'Erosional'),
         }

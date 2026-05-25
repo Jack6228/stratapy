@@ -8,8 +8,8 @@ Publication: https://doi.org/10.5281/zenodo.19320013
 Authors: Jack Lee Smith, Christina Antoniou, Ruaridh Alexander
 """
 
-__all__ = ['update_minerals', 'update_lithologies', 'update_features', 'load', 'chronostratigraphy', 'multi_fig', 'correlated_logs', 'standalone_legend', 'list_examples']
-__version__ = '0.9.2'
+__all__ = ['update_minerals', 'update_lithologies', 'update_features', 'update_contacts', 'load', 'chronostratigraphy', 'multi_fig', 'correlated_logs', 'standalone_legend', 'list_examples']
+__version__ = '1.0.0'
 __author__ = 'Jack Lee Smith, Christina Antoniou, Ruaridh Alexander'
 __license__ = 'BSD 3-Clause License'
 __copyright__ = 'Copyright (c) 2026 Jack Lee Smith'

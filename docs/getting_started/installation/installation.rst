@@ -18,7 +18,7 @@ After installation, you can verify that stratapy is installed correctly by openi
 
 This should print the version number of stratapy that you have installed.
 
-Stratapy will be updated periodically with new features and bug fixes. To update stratapy to the latest version, you can run:
+stratapy will be updated periodically with new features and bug fixes. To update stratapy to the latest version, you can run:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 Changing the Log Format
 =======================
 
-Stratapy has a wide range of customisation options to adjust the appearance and behaviour of your logs. 
+stratapy has a wide range of customisation options to adjust the appearance and behaviour of your logs. 
 
 One of the main ways to customise logs is to pass different parameters to the ``load()`` and ``plot()`` functions. These parameters allow you to change things like the size, layout, and structure of a log by changing a few words.
 

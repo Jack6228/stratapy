@@ -7,7 +7,7 @@ stratapy offers significant flexibility in adjust the lithologies, minerals, and
 - Minerals can be edited or added, customising the shapes, colours, and labels to suit your needs.
 - Our large library of features can be tailored by changing their label or the section of the legend in which they appear. New features can also be created from custom images.
 
-.. grid:: 3
+.. grid:: 2
 
      .. grid-item-card:: Lithologies
         :link: lithologies.html
@@ -21,11 +21,19 @@ stratapy offers significant flexibility in adjust the lithologies, minerals, and
        
         Customise existing or add new features
 
+.. grid:: 2
+
      .. grid-item-card:: Minerals
         :link: minerals.html
         :link-type: url
 
         Edit or create new mineral symbols
+
+     .. grid-item-card:: Bed Contacts
+        :link: contacts.html
+        :link-type: url
+
+        Add new bed contact types
 
 .. toctree::
    :maxdepth: 1
@@ -34,3 +42,4 @@ stratapy offers significant flexibility in adjust the lithologies, minerals, and
    lithologies
    minerals
    features
+   contacts

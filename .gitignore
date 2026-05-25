@@ -15,3 +15,5 @@ htmlcov/
 Thumbs.db
 *.bat
 temp_vis.py
+.nox/
+noxfile.py

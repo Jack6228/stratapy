@@ -434,12 +434,16 @@ def create_log(helper : object, fig, ax, override_ylims, share_legend) -> tuple[
                 plot_efficient_line(ax, geom_b[4][:, 0], geom_b[4][:, 1], color='k', lw=helper.border_lw, ls='solid', zord=zord)
             plot_upper_border = True
 
+        if helper.y_mode in ['height', 'age']:
+            difference = helper.df.iloc[r-1]['height/age'] - helper.df.iloc[r-1]['thickness'] if r > 0 else None
+        elif helper.y_mode == 'depth':
+            difference = abs(helper.df.iloc[r-1]['height/age'] + helper.df.iloc[r-1]['thickness']) if r > 0 else None
         if (r > 0
             and helper.unit_borders
             and row['rock'] != helper.df.iloc[r-1]['rock']
             and not allclose(
                 helper.df.iloc[r]['height/age'],
-                helper.df.iloc[r-1]['height/age'] + helper.df.iloc[r-1]['thickness']
+                difference
             ) ):
             # If there is a gap between units, plot the bottom border of the previous unit to close the gap
             ax.plot(previous_bottom[:, 0], previous_bottom[:, 1], color='k', lw=helper.border_lw, ls='solid', zorder=helper.zorder_borders, clip_on=False)

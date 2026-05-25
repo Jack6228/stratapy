@@ -4,7 +4,7 @@ First Time Setup
 .. note::
    If you are new to Python or programming, and these concepts are unfamiliar to you, remember that online alternatives which require no installation are available, such as Google Colab. See the `Using Online Platforms <online_platforms.html>`__ guide for more details.
 
-Stratapy uses the Python programming language, so you will need to have Python installed on your computer before you can use stratapy. The panel below provides step-by-step instructions on how to install Python, depending on your operating system (Windows, MacOS, Linux). Follow the instructions carefully to set up your Python environment.
+stratapy uses the Python programming language, so you will need to have Python installed on your computer before you can use stratapy. The panel below provides step-by-step instructions on how to install Python, depending on your operating system (Windows, MacOS, Linux). Follow the instructions carefully to set up your Python environment.
 
 .. tab-set::
 

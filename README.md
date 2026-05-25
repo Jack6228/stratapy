@@ -14,6 +14,11 @@ A Python-based framework for automated visualisation of creating standardised, r
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19320013-blue)](https://doi.org/10.5281/zenodo.19320013)
 [![Docs](https://img.shields.io/badge/ReadTheDocs-latest-8ca1af?logo=readthedocs)](https://stratapy.readthedocs.io/en/latest/?badge=latest)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/Tutorial.ipynb)
+[![Downloads](https://pepy.tech/badge/stratapy)](https://pepy.tech/project/stratapy)
+[![Python Versions](https://img.shields.io/pypi/pyversions/stratapy)](https://pypi.org/project/stratapy/)
+[![Tests](https://img.shields.io/github/actions/workflow/status/Jack6228/stratapy/ci.yaml?branch=main)](https://github.com/Jack6228/stratapy/actions/workflows/ci.yaml?query=branch%3Amain)
+<!-- [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](http://opensource.org/licenses/BSD-3-Clause)- -->
+
 
 ## Key Features
 
@@ -99,4 +104,17 @@ For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the fo
 ```
 ## License
 
-Distributed under the **BSD 3-Clause License**. See `LICENSE` for more information.
+Distributed under the **BSD 3-Clause License**. See `LICENSE.txt` for more information.
+
+## Compatibility
+
+stratapy is compatible with Python 3.9 and above, and supports a wide range of versions for key dependencies (NumPy, Pandas, Matplotlib).
+
+| Python Version | NumPy Range | Pandas Range | Matplotlib Range | Status | Notes |
+| :--- | :--- | :--- | :---: | :--- | :--- |
+| 3.11 | >=1.22 | >=1.4 | >=3.0 | ✔️ | Recommended Environment (Full support across all versions) |
+| 3.12 / 3.13 | >=1.24 | >=2.0 | >=3.8 | ✔️ | Fully Supported (Legacy stacks are not compatible) |
+| 3.14 | >=2.0 | >=2.2 | >=3.9 | ✔️ | Bleeding-Edge (Support for latest Python and dependencies; may have some issues with older versions) |
+| 3.9 / 3.10 | <2.1 | <3.0 | <3.10 | ✔️ | Supported for stable/legacy stacks; excludes bleeding-edge |
+| <=3.8 | — | — | — | ❌ | Unsupported |
+|

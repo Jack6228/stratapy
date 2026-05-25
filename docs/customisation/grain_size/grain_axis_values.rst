@@ -15,7 +15,7 @@ The following presets are available:
 
 .. tab-set::
 
-    .. tab-item:: Sedimentary (default)
+    .. tab-item:: Clastic (default)
 
       .. list-table::
         :header-rows: 0
@@ -44,8 +44,8 @@ The following presets are available:
           - 6.5
           - 7.5
 
-      .. image:: ../../_static/reference/axes_sedimentary.png
-          :alt: Sedimentary grain sizes
+      .. image:: ../../_static/reference/axes_clastic.png
+          :alt: Clastic grain sizes
           :height: 100px
 
     .. tab-item:: Volcanic
@@ -77,7 +77,69 @@ The following presets are available:
           :alt: Volcanic grain sizes  
           :height: 100px
 
-    .. tab-item:: Geological
+    .. tab-item:: Carbonate
+
+      .. list-table::
+        :header-rows: 0
+        :stub-columns: 1
+
+        * - key
+          - crypto
+          - f
+          - c
+          - vf
+          - f^
+          - m
+          - c^
+          - vc
+          - b/c
+        * - value
+          - 1
+          - 1.5
+          - 2
+          - 2.5
+          - 3
+          - 3.5
+          - 4
+          - 4.5
+          - 5
+
+      .. image:: ../../_static/reference/axes_carbonate.png
+          :alt: Carbonate grain sizes 
+          :height: 100px
+
+    .. tab-item:: Dunham
+
+      .. list-table::
+        :header-rows: 0
+        :stub-columns: 1
+
+        * - key
+          - Mst
+          - Wst
+          - Pst
+          - Gst
+          - Fst
+          - Rst
+          - Bfst
+          - Bst
+          - Frst
+        * - value
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+
+      .. image:: ../../_static/reference/axes_dunham.png
+          :alt: Dunham grain sizes
+          :height: 100px
+
+    .. tab-item:: Sedimentary
 
       .. list-table::
         :header-rows: 0
@@ -87,13 +149,15 @@ The following presets are available:
           - clay
           - silt
           - sand
+          - gravel
         * - value
           - 1
           - 1.5
           - 2.5
+          - 4
 
-      .. image:: ../../_static/reference/axes_geological.png
-          :alt: Geological grain sizes
+      .. image:: ../../_static/reference/axes_sedimentary.png
+          :alt: Sedimentary grain sizes
           :height: 100px
 
 .. note::

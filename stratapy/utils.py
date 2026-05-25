@@ -5,6 +5,7 @@ Functions from this module are imported into stratapy.core and stratapy.plotting
 """
 
 from os import path
+from typing import Tuple, Union
 from numpy import array, zeros, clip
 import pandas as pd
 
@@ -151,7 +152,28 @@ def make_box(ax : "matplotlib.axes.Axes", row : list, rank_dict : dict, rank_wid
 
     return ax, t, t2
 
-def colour_to_rgba(colour : str | tuple) -> tuple[float, float, float, float]:
+def is_valid_linestyle(ls) -> bool:
+    """
+    Checks if the provided linestyle is valid in matplotlib.
+
+    Parameters
+    ----------
+    ls : str
+        The linestyle to check.
+
+    Returns
+    -------
+    bool
+        True if the linestyle is valid, False otherwise.
+    """    
+    from matplotlib.lines import Line2D
+    try:
+        Line2D([], []).set_linestyle(ls)
+        return True
+    except (ValueError, TypeError):
+        return False
+
+def colour_to_rgba(colour : Union[str, tuple]) -> Tuple[float, float, float, float]:
     """
     Takes in a value (primary expects either strings of matplotlib colours or hex values, or RGB tuples) and converts it to a RGBA tuple.
 
@@ -621,7 +643,7 @@ def read_strata_file(filename: str, formatting : "module", x_ticks_dict : dict) 
 
     ## Contacts
     # -------------------
-    types = ['gradational','hard','']
+    contact_keys = list(formatting.contact_types.keys())
     # Contacts must be a string, or empty
     df['contact'] = df['contact'].fillna('').astype(str)
     
@@ -630,8 +652,8 @@ def read_strata_file(filename: str, formatting : "module", x_ticks_dict : dict) 
         if df.loc[i, 'contact'] != '':
             # Convert to lower and remove leading and trailing whitespace
             contact = df.loc[i, 'contact'].lower().strip()
-            if contact not in types:
-                print(f"[{path.basename(filename)}] Desired contact type: '{contact}' is not available so it will be set to the default. Available options are: {types}.")
+            if contact not in contact_keys:
+                print(f"[{path.basename(filename)}] Desired contact type: '{contact}' is not available so it will be set to the default. Available options are: {contact_keys}.")
                 df.loc[i, 'contact'] = ''
 
     # Shift all contact down by one, to represent top contact of following layer instead of bottom contact of current layer. Drop the last row as it will be NaN
@@ -651,8 +673,8 @@ def parse_params(params: dict) -> dict:
         User-supplied parameter dictionary. Keys not recognised by the function
         (other than 'self') are ignored with a printed warning. Recognised keys,
         their expected types and defaults are:
-        - grain_preset : {'sedimentary', 'volcanic', 'geological'}
-            Default: 'sedimentary'. Determines preset grain tick and bracket
+        - grain_preset : {'clastic', 'volcanic', 'sedimentary', 'dunham', 'carbonate'}
+            Default: 'clastic'. Determines preset grain tick and bracket
             dictionaries if they are not provided explicitly.
         - x_ticks_dict : dict or None
             Default: None. If provided must be a dict mapping string tick labels to
@@ -727,7 +749,7 @@ def parse_params(params: dict) -> dict:
     import matplotlib.pyplot as plt
     # Define valid parameters and their defaults
     valid_params = {
-        'grain_preset': 'sedimentary',
+        'grain_preset': 'clastic',
         'x_ticks_dict': None,
         'grain_brackets': None,
         'fig': None,
@@ -779,30 +801,43 @@ def parse_params(params: dict) -> dict:
     
     # Set defaults for x_ticks_dict if None
     if result['x_ticks_dict'] is None:
-        preset = result.get('grain_preset', 'sedimentary')
-        if preset not in ['sedimentary', 'volcanic', 'geological']:
-            print(f"Warning: `grain_preset` must be one of 'sedimentary', 'volcanic', or 'geological'. Received '{preset}'. Defaulting to 'sedimentary'.")
-            preset = 'sedimentary'
+        preset = result.get('grain_preset', 'clastic')
+        if preset not in ['clastic', 'volcanic', 'sedimentary', 'dunham', 'carbonate']:
+            print(f"Warning: `grain_preset` must be one of 'clastic', 'volcanic', 'sedimentary', 'dunham', 'carbonate'. Received '{preset}'. Defaulting to 'clastic'.")
+            preset = 'clastic'
             result['grain_preset'] = preset
         if preset == 'volcanic':
             result['x_ticks_dict'] = {'vf': 1, 'f': 1.5, 'm': 2, 'c': 2.5, 'f^': 3, 'm^': 3.5, 'c^': 4, 'block/bomb': 5}
-        elif preset == 'geological':
+        elif preset == 'sedimentary':
             result['x_ticks_dict'] = {'clay': 1, 'silt': 1.5, 'sand': 2.5, 'gravel': 4}
-        else:  # sedimentary
+        elif preset == 'carbonate':
+            result['x_ticks_dict'] = {'crypto': 1, 'f': 1.5, 'c': 2, 'vf': 2.5, 'f^': 3, 'm': 3.5, 'c^': 4, 'vc': 4.5, 'b/c': 5}
+        elif preset == 'dunham':
+            result['x_ticks_dict'] = {'Mst': 1, 'Wst': 2, 'Pst': 3, 'Gst': 4, 'Fst': 5, 'Rst': 6, 'Bfst': 7, 'Bst': 8, 'Frst': 9}
+        else:  # clastic
             result['x_ticks_dict'] = {'clay': 1, 'silt': 2, 'vf': 3, 'f': 3.5, 'm': 4, 'c': 4.5, 'vc': 5, 'p': 6, 'cb': 6.5, 'b': 7.5}
+        # NOTE: phi scale not implemented due to counter-intuitive dual-numeric system, but left here as reference
+        # elif preset == 'phi':
+        #     result['x_ticks_dict'] = {'10': 1, '8': 1.7, '6': 2.4, '4': 3.1, '2': 3.8, '0': 4.5, '-2': 5.2, '-4': 5.9, '-6': 6.6, '-8': 7.3, '-10': 8}
     
     # Set defaults for grain_brackets if None
     if result['grain_brackets'] is None:
-        preset = result.get('grain_preset', 'sedimentary')
-        if preset not in ['sedimentary', 'volcanic', 'geological']:
-            preset = 'sedimentary'
+        preset = result.get('grain_preset', 'clastic')
+        if preset not in ['clastic', 'volcanic', 'sedimentary', 'dunham', 'carbonate']:
+            preset = 'clastic'
             result['grain_preset'] = preset
         if preset == 'volcanic':
             result['grain_brackets'] = {'ash': [1, 2.5], 'lapilli': [3, 4]}
-        elif preset == 'geological':
+        elif preset == 'sedimentary':
             result['grain_brackets'] = {}
-        else:  # sedimentary
+        elif preset == 'carbonate':
+            result['grain_brackets'] = {'micro': [1.5, 2]}
+        elif preset == 'dunham':
+            result['grain_brackets'] = {'mud sup.': [1, 2], 'grain sup.': [3, 4], '> 10% clast': [5, 6], 'biotic': [7, 9]}
+        else:  # clastic
             result['grain_brackets'] = {'sand': [3, 5], 'gravel': [6, 7.5]}
+        # elif preset == 'phi':
+        #     result['grain_brackets'] = {'muds': [1, 2.9], 'sands': [3.3, 4.65], 'pebbles': [5.05, 6.4], 'cobbles': [6.8, 8]}
 
     # Validation logic for LogObject.plot() parameters
     # fig must be None or a matplotlib figure object
