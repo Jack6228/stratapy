@@ -9,10 +9,10 @@ June 28th, 2026
 
 **stratapy V1.0 releases! Find the paper in Scientific Reports**: https://www.nature.com/articles/s41598-026-58501-2
 
-Updated default grain size axis to be 'clastic' instead of 'sedimentary' and 'geological' to be 'sedimentary'. Added new grain size presets for the extended Dunham classification and a carbonate scale from Leighton and Pendexter.
-Added ability to add custom contact types through `stratapy.update_contacts()`.
-Added continuous integration and provided comprehensive test coverage for the package, including fixing some incompatibilities with older versions of Python.
-Fixed an issue where white lithology patterns were not displaying as transparent when ``transparent=True`` was used in the save method.
+- Updated default grain size axis to be 'clastic' instead of 'sedimentary' and 'geological' to be 'sedimentary'. Added new grain size presets for the extended Dunham classification and a carbonate scale from Leighton and Pendexter.
+- Added ability to add custom contact types through `stratapy.update_contacts()`.
+- Added continuous integration and provided comprehensive test coverage for the package, including fixing some incompatibilities with older versions of Python.
+- Fixed an issue where white lithology patterns were not displaying as transparent when ``transparent=True`` was used in the save method.
 
 v0.9.2
 ------
