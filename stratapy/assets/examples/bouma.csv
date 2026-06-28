@@ -1,0 +1,17 @@
+height/age,rock,thickness,bottom_grain,top_grain,connection_type,erosion,lenses,minerals,features,contact
+6.2,620b*,,clay,clay,,,,,bioturbation medium,gradational
+5.7,new_616,,silt,clay,concave,,,,planar laminations,gradational
+5.4,new_607,,vf,silt,concave^,,,,climbing ripples,gradational
+5.2,new_607,,f,vf,concave^,,,,planar laminations,gradational
+4.9,new_607,,m,f,concave^,0.06;0.5,,,normal grading,sharp
+4.5,620b*,,clay,clay,,,,,,gradational
+3.9,new_616,,silt,clay,concave,,,,planar laminations,gradational
+3.7,new_607,,f,silt,concave^,,,,convolute bedding,gradational
+3.3,new_607,,m,f,concave^,,,,planar laminations,gradational
+2.8,new_607,,c,m,concave^,0.08;0.7,,,rip up clasts; flute marks; normal grading,sharp
+2,620b*,,clay,clay,,,,,,gradational
+1.6,new_616,,silt,clay,concave,,,,planar laminations,gradational
+1.5,new_607,,f,silt,concave,,,,climbing ripples,gradational
+1.2,new_607,,m,f,concave,,,,planar laminations,gradational
+0.7,new_607,,vc,m,concave^,0.09;0.8,,,rip up clasts; flute marks; normal grading,sharp
+0.15,620b*,0.15,clay,clay,,,,,,

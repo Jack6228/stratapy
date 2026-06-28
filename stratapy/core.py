@@ -1373,7 +1373,7 @@ def update_lithologies(patterns : dict) -> None:
         elif isinstance(value, tuple) and (len(value) == 3 and (value[0] == '' or value[0] is None)):
             # If the first value is empty or None, it is a colour-filled lithology with no pattern
             try:
-                cmap = colour_to_rgba(value[1]) if value[1] != '' else 'w' # Default to white if no colour provided
+                cmap = colour_to_rgba(value[1]) if value[1] != '' else (0, 0, 0, 0) # Default to transparent if no colour provided
             except Exception:
                 ignore.update({key: f"'{value[1]}' is not a valid colour. Please use a valid colour string or RGB tuple."})
                 continue
@@ -1417,10 +1417,10 @@ def update_lithologies(patterns : dict) -> None:
                         value = (value[0], value[1], formatting.lithologies[existing_key][-1] if value[2] == '' else value[2])
 
                 # Extract and validate colour
-                # If no cmap provided, assume white (default)
+                # If no cmap provided, assume transparent
                 cmap = value[1]
                 if cmap == '':
-                    cmap = 'w'
+                    cmap = (0,0,0,0)
                 # If the cmap is an actual cmap, use that, if not, assume a colour and create a cmap, else error
                 if isinstance(cmap, str) and cmap in colormaps():
                     cmap = cmap

@@ -60,23 +60,25 @@ Citing stratapy
 
 .. epigraph::
 
-   Smith, et al. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+   Smith J.L., Antoniou, C., Alexander, R. Stratapy: a tool for automated stratigraphic log visualisation. Sci Rep (2026). https://doi.org/10.1038/s41598-026-58501-2
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg
+.. image:: https://zenodo.org/badge/DOI/10.1038/s41598-026-58501-2.svg
    :alt: DOI badge
-   :target: https://doi.org/10.5281/zenodo.XXXXXXX
+   :target: https://doi.org/10.1038/s41598-026-58501-2
 
 .. code-block:: none
 
-   @software{smith_stratapy_2026,
-      author = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
-      title = {{stratapy: A Python tool for automated stratigraphic log visualisation}},
-      month = {3},
-      year = {2026},
-      publisher = {Zenodo},
-      version = {v0.9.0},
-      doi = {},
-      url = {https://github.com/Jack6228/stratapy}
+   @article{smith2026stratapy,
+      title={Stratapy: a tool for automated stratigraphic log visualisation},
+      author={Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
+      journal={Scientific Reports},
+      year={2026},
+      volume={},
+      issue={},
+      month={},
+      publisher={Nature Publishing Group},
+      doi={10.1038/s41598-026-58501-2},
+      url={https://www.nature.com/articles/s41598-026-58501-2}
    }
 
 |PyPI| |Docs| |Colab|

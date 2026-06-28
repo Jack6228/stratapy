@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file.
 
 v1.0.0
 ------
-*In preparation*
+June 28th, 2026
+
+**stratapy V1.0 releases! Find the paper in Scientific Reports**: https://www.nature.com/articles/s41598-026-58501-2
 
 Updated default grain size axis to be 'clastic' instead of 'sedimentary' and 'geological' to be 'sedimentary'. Added new grain size presets for the extended Dunham classification and a carbonate scale from Leighton and Pendexter.
 Added ability to add custom contact types through `stratapy.update_contacts()`.
@@ -14,7 +16,6 @@ Fixed an issue where white lithology patterns were not displaying as transparent
 
 v0.9.2
 ------
-
 May 4th, 2026
 
 - Fixed issues with smoothing of unit borders.

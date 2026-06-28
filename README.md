@@ -11,7 +11,8 @@
 A Python-based framework for automated visualisation of creating standardised, reproducible, and digitally integrated stratigraphic logs.
 
 [![PyPI](https://img.shields.io/badge/PyPI-stratapy-FCB001?logo=pypi)](https://pypi.org/project/stratapy/)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19320013-blue)](https://doi.org/10.5281/zenodo.19320013)
+[![Paper](https://img.shields.io/badge/Paper-Scientific_Reports-blue)](https://doi.org/10.1038/s41598-026-58501-2)
+
 [![Docs](https://img.shields.io/badge/ReadTheDocs-latest-8ca1af?logo=readthedocs)](https://stratapy.readthedocs.io/en/latest/?badge=latest)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jack6228/stratapy/blob/main/examples/Tutorial.ipynb)
 [![Downloads](https://pepy.tech/badge/stratapy)](https://pepy.tech/project/stratapy)
@@ -84,22 +85,23 @@ For full API reference and tutorials, visit [our ReadTheDocs page](https://strat
 
 ## Citation
 
-If you use this software in your research or otherwise, please cite it as follows:
+If you use this software in your research or otherwise, please cite its associated publication:
 
-> Smith, J. L., Antoniou, C., & Alexander, R. (2026). stratapy: A Tool for Automated Stratigraphic Log Visualisation (v0.9.2). Zenodo. https://doi.org/10.5281/zenodo.19320013
+> Smith, J. L., Antoniou, C., & Alexander, R. (2026). Stratapy: a tool for automated stratigraphic log visualisation. *Scientific Reports* **16** 1 https://doi.org/10.1038/s41598-026-58501-2
 
 For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the following BibTeX entry:
 
 ```bibtex
 @software{smith_stratapy_2026,
   author       = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
-  title        = {stratapy: A Tool for Automated Stratigraphic Log Visualisation},
-  month        = mar,
+  title        = {Stratapy: a tool for automated stratigraphic log visualisation},
+  journal      = {Scientific Reports},
+  volume       = {},
+  number       = {},
+  month        = june,
   year         = 2026,
-  publisher    = {Zenodo},
-  version      = {v0.9.2},
-  doi          = {10.5281/zenodo.19320013},
-  url          = {https://doi.org/10.5281/zenodo.19320013},
+  doi          = {10.1038/s41598-026-58501-2},
+  url          = {https://doi.org/10.1038/s41598-026-58501-2},
 }
 ```
 ## License
@@ -117,4 +119,3 @@ stratapy is compatible with Python 3.9 and above, and supports a wide range of v
 | 3.14 | >=2.0 | >=2.2 | >=3.9 | ✔️ | Bleeding-Edge (Support for latest Python and dependencies; may have some issues with older versions) |
 | 3.9 / 3.10 | <2.1 | <3.0 | <3.10 | ✔️ | Supported for stable/legacy stacks; excludes bleeding-edge |
 | <=3.8 | — | — | — | ❌ | Unsupported |
-|

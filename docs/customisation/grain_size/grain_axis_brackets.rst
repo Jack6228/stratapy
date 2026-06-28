@@ -11,7 +11,7 @@ This parameter has default values for all of the available grain size presets, a
         grain_brackets = {'sand': [3, 5], 'gravel': [6, 7.5]}
         log = sp.load('tutorial.csv', grain_brackets=grain_brackets)
 
-    .. image:: ../../_static/reference/axes_sedimentary.png
+    .. image:: /_static/reference/axes_sedimentary.png
         :alt: Sedimentary grain size brackets
         :height: 100px
 
@@ -34,7 +34,7 @@ For example, to change the brackets of the default 'clastic' preset:
     }
     log = sp.load('file.csv', grain_brackets=grain_brackets)
 
-.. image:: ../../_static/reference/axes_custom_brackets.png
+.. image:: /_static/reference/axes_custom_brackets.png
    :alt: Custom grain size brackets
    :width: 70%
 
@@ -50,6 +50,6 @@ Alternatively, we can specify a custom dictionary of grain sizes and brackets:
     }
     log = sp.load('file.csv', x_ticks_dict=x_ticks, grain_brackets=brackets)
 
-.. image:: ../../_static/reference/axes_custom_ticks_brackets.png
+.. image:: /_static/reference/axes_custom_ticks_brackets.png
    :alt: Custom grain size brackets
    :width: 70%

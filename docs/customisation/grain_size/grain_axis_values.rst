@@ -44,7 +44,7 @@ The following presets are available:
           - 6.5
           - 7.5
 
-      .. image:: ../../_static/reference/axes_clastic.png
+      .. image:: /_static/reference/axes_clastic.png
           :alt: Clastic grain sizes
           :height: 100px
 
@@ -73,7 +73,7 @@ The following presets are available:
           - 4
           - 5
 
-      .. image:: ../../_static/reference/axes_volcanic.png
+      .. image:: /_static/reference/axes_volcanic.png
           :alt: Volcanic grain sizes  
           :height: 100px
 
@@ -104,7 +104,7 @@ The following presets are available:
           - 4.5
           - 5
 
-      .. image:: ../../_static/reference/axes_carbonate.png
+      .. image:: /_static/reference/axes_carbonate.png
           :alt: Carbonate grain sizes 
           :height: 100px
 
@@ -135,7 +135,7 @@ The following presets are available:
           - 8
           - 9
 
-      .. image:: ../../_static/reference/axes_dunham.png
+      .. image:: /_static/reference/axes_dunham.png
           :alt: Dunham grain sizes
           :height: 100px
 
@@ -156,7 +156,7 @@ The following presets are available:
           - 2.5
           - 4
 
-      .. image:: ../../_static/reference/axes_sedimentary.png
+      .. image:: /_static/reference/axes_sedimentary.png
           :alt: Sedimentary grain sizes
           :height: 100px
 
@@ -185,7 +185,7 @@ As an example, below we change the labels and positions of the default sedimento
     }
     log = sp.load('file.csv', x_ticks_dict=x_ticks)
 
-.. image:: ../../_static/reference/axes_custom_grain_ticks.png
+.. image:: /_static/reference/axes_custom_grain_ticks.png
     :alt: Custom grain axis
     :height: 100px
 

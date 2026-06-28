@@ -10,6 +10,8 @@ This page presents a comprehensive gallery of example figures produced with stra
    :hidden:          
    :titlesonly:
 
+   ../gallery/bouma
+   ../gallery/neoproterozoic
    ../gallery/UKGeos
    ../gallery/tephrochronology
    ../gallery/cyprusLog
@@ -20,6 +22,42 @@ This page presents a comprehensive gallery of example figures produced with stra
 
    Use ``Ctrl`` + ``F`` to search for specific keywords within the gallery.
 
+
+.. rubric:: Bouma Sequence Log
+
+A simple log showing the Bouma sequence with some minimal customisation.
+
+Keywords: custom lithologies, sedimentary log, Bouma sequence, turbidity currents
+
+.. image:: ../_static/gallery/bouma.png
+   :alt: Bouma sequence log
+   :target: ../gallery/bouma.html
+   :align: center
+   :width: 600
+
+.. rubric:: Customised Log of Cyprus
+
+A log showing the depositional history of Cyprus, with customised lithological patterns, colours, and names.
+
+Keywords: custom lithologies, Cyprus, depositional history, sedimentary log
+
+.. image:: ../_static/gallery/CustomisedLog.png
+   :alt: Stratigraphic log of Cyprus
+   :target: ../gallery/cyprusLog.html
+   :align: center
+   :width: 600
+
+.. rubric:: Log with Chronostratigraphy
+
+A log showing the Neoproterozoic to Ordovician stratigraphy of southeastern Idaho with accompanying chronostratigraphy.
+
+Keywords: custom lithologies, Cyprus, depositional history, sedimentary log
+
+.. image:: ../_static/gallery/neoproterozoic.png
+   :alt: Stratigraphic log of Cyprus
+   :target: ../gallery/neoproterozoic.html
+   :align: center
+   :width: 600
 
 .. rubric:: Aligned Borehole Logs
 
@@ -45,23 +83,11 @@ Keywords: tephrochronology, tephra, correlated logs, volcanic ash layers, geochr
    :align: center
    :width: 600
 
-.. rubric:: Customised Log
-
-A log showing the depositional history of Cyprus, with customised lithological patterns, colours, and names.
-
-Keywords: custom lithologies, Cyprus, depositional history, sedimentary log
-
-.. image:: ../_static/gallery/CustomisedLog.png
-   :alt: Stratigraphic log of Cyprus
-   :target: ../gallery/cyprusLog.html
-   :align: center
-   :width: 600
-
 .. rubric:: Multi-figure Sedimentary Logs
 
 Three sedimentary logs are plotted in a single figure, with a shared legend and consistent formatting.
 
-Keywords: multi figure logs, sedimentary logs, shared legend, Cyprus
+Keywords: multi figure logs, sedimentary logs, shared legend, Cyprus, black and white
 
 .. image:: ../_static/gallery/SedimentologyLogs.png
    :alt: Multi-figure sedimentary logs
@@ -73,7 +99,7 @@ Keywords: multi figure logs, sedimentary logs, shared legend, Cyprus
 
 Matplotlib is used to create a custom figure layout where a stratapy log is plotted alongside geochemical data and formation subdivisions. This example also uses the ``log.add_samples`` method to add a formatted point representing a radiometric age.
 
-Keywords: geochemistry, custom figure layout, multi-figure, samples, radiometric age, formation subdivisions, matplotlib
+Keywords: geochemistry, custom figure layout, multi-figure, samples, radiometric age, formation subdivisions, matplotlib, black and white
 
 .. image:: ../_static/gallery/Geochemistry.png
    :alt: Custom figure layout with geochemistry

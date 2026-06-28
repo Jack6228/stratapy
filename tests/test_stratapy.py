@@ -118,6 +118,7 @@ def test_update_helpers_smoke_with_restore():
         sp.update_minerals({"pytest_garnet": ("#FF00FF", "k", "d")})
         sp.update_lithologies({"pytest_lith": ("limestone", "tan", "Pytest Lithology")})
         sp.update_features({"pytest_scaphopod": ("", "trace fossil", "Pytest Scaphopod")})
+        sp.update_contacts({'my_contact': (1, 'dashed', 'magenta', 'My Contact')})
 
         assert "pytest_garnet" in sp.formatting.minerals_list
         assert "pytest_lith" in sp.formatting.lithologies

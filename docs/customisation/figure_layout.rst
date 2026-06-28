@@ -95,7 +95,7 @@ Fonts and Font Size
         'chronostratigraphy_labels': 12.8,
     })
 
-  .. image:: ../../_static/reference/AnnotatedFontsizeKeys.png
+  .. image:: /_static/reference/AnnotatedFontsizeKeys.png
     :alt: Annotated font size keys
     :width: 65%
 

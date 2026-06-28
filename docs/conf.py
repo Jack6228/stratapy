@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath('../'))
 project = 'stratapy'
 copyright = '2026, Jack Lee Smith, Christina Antoniou, Ruaridh Alexander'
 author = 'Jack Lee Smith, Christina Antoniou, Ruaridh Alexander'
-release = '0.9.2'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 
@@ -24,7 +24,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 
 html_theme = 'sphinx_rtd_theme' # Clean, modern look
-html_logo = '_static/stratapy_horizontal.png'  # Path to your logo file
+html_logo = '_static/stratapy_horizontal.png'  # Logo file
 html_theme_options = {
     'logo_only': True,  # Use logo only, no text
 }
@@ -37,5 +37,5 @@ html_sidebars = {
 }
 html_static_path = ['_static']
 html_css_files = ['styles.css']
-html_favicon = '_static/stratapy_icon.png'  # Path to your favicon file
+html_favicon = '_static/stratapy_icon.png'  # Favicon file
 #html_extra_path = ['examples'] # Include CSV files in the build

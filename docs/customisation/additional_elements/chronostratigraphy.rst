@@ -48,7 +48,7 @@ Examples
 .. code-block:: python
 
     # Load an example log which has an age axis in Ka
-    log = sp.load('examples.basic.csv')
+    log = sp.load('examples.age_based_log_Ka.csv')
     # Plot the log, specifying the age units
     log.plot(y_axis_unit='Ka')
     # Add chronostratigraphy to show system, series, and stage

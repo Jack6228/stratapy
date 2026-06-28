@@ -187,7 +187,7 @@ To indicate types of contact between units, this column is used to indicate the 
 
 Note that the 'erosional' contact type is created automatically when erosion is specified in the ``erosion`` column, and cannot be specified in this column.
 
-.. image:: ../../_static/reference/ContactTypes_transparent.png
+.. image:: /_static/reference/ContactTypes_transparent.png
     :alt: Available contact types in stratapy
     :width: 50%
 
@@ -198,7 +198,7 @@ Note that the 'erosional' contact type is created automatically when erosion is 
 The table below shows the input file for the tutorial file which will be used in this documentation. a simple log which we will visualise in this tutorial.
 
 .. csv-table:: Example input file for stratapy
-    :file: ../../_static/tutorial.csv
+    :file: /_static/tutorial.csv
     :header-rows: 1
 
 .. tip::
