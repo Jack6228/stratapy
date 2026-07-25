@@ -3,6 +3,12 @@ Changelog
 
 All notable changes to this project will be documented in this file.
 
+v1.0.1
+------
+July 25th, 2026
+
+- Added a new optional parameter to `LogObject.plot()` called `consec_units` which allows users to choose whether consecutive units of the same rock type should be combined into a single stratum (default behaviour) or plotted separately with individual bed contacts. See GitHub issue #1 for more details.
+
 v1.0.0
 ------
 June 28th, 2026

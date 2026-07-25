@@ -733,6 +733,8 @@ def parse_params(params: dict) -> dict:
                       'Bed Contacts'].
         - legend_kwargs : dict
             Default: {}.
+        - consec_units : bool
+            Default: True. If True, consecutive units of the same lithology will be merged into a single unit for plotting.
 
     Returns
     -------
@@ -774,6 +776,7 @@ def parse_params(params: dict) -> dict:
         'xmax': None,
         'legend_titles': ['Lithologies', 'Minerals', 'Sedimentary Structures', 'Palaeontological Features', 'Tectonic Structures', 'Bed Contacts'],
         'legend_kwargs': {},
+        'consec_units': True
     }
     result = valid_params.copy()
 
@@ -946,6 +949,11 @@ def parse_params(params: dict) -> dict:
     if not isinstance(result['legend_kwargs'], dict):
         print(f"Warning: `legend_kwargs` must be a dictionary. Received {type(result['legend_kwargs']).__name__}. Defaulting to an empty dictionary.")
         result['legend_kwargs'] = {}
+
+    # consec_units must be a boolean, otherwise defaults to True
+    if not isinstance(result['consec_units'], bool):
+        print(f"Warning: `consec_units` must be a boolean. Received {type(result['consec_units']).__name__}. Defaulting to True.")
+        result['consec_units'] = True
 
     return result
 

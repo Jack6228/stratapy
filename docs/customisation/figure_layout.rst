@@ -43,6 +43,12 @@ Borders and Spines
   
   - Example: `plot(unit_borders=True)`
 
+- **consec_units**:  
+
+  Determines whether consecutive units of the same lithology are merged into a single unit or displayed separately. Default is `True` (merged). Set to `False` to display each unit individually. with non-continuous patterns and bed contacts drawn between each unit.
+
+  - Example: `plot(consec_units=False)`
+
 - **spines**:  
 
   Controls the visibility of the axis spines (the lines around the plot area).

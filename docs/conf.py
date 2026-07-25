@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath('../'))
 project = 'stratapy'
 copyright = '2026, Jack Lee Smith, Christina Antoniou, Ruaridh Alexander'
 author = 'Jack Lee Smith, Christina Antoniou, Ruaridh Alexander'
-release = '1.0.0'
+release = '1.0.1'
 
 # -- General configuration ---------------------------------------------------
 

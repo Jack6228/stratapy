@@ -22,7 +22,7 @@ keywords:
   - geology
   - python
   - logging
-version: 1.0.0
+version: 1.0.1
 doi: "10.5281/zenodo.19320013"
 date-released: 2026-06-28
 repository-code: "https://github.com/Jack6228/stratapy"

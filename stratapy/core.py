@@ -86,7 +86,7 @@ class LogObject:
         self.x_ticks_dict = kwargs.get('x_ticks_dict')
         self.grain_brackets = kwargs.get('grain_brackets')
 
-    def plot(self, fig=None, ax=None, display_mode='default', feature_mode=None, unit_borders=True, legend_loc='right', legend_columns=1, legend_border=True, figsize=None, dpi=150, ppi=400, x_label='', x_axis=True, y_label=None, y_axis_unit='', spines=False, mineral_size=1, feature_size=1, xmax=None, legend_titles=['Lithologies', 'Minerals', 'Sedimentary Structures', 'Palaeontological Features', 'Tectonic Structures', 'Bed Contacts', 'Sample Indicators'], legend=True, legend_kwargs={}) -> tuple:
+    def plot(self, fig=None, ax=None, display_mode='default', feature_mode=None, unit_borders=True, legend_loc='right', legend_columns=1, legend_border=True, figsize=None, dpi=150, ppi=400, x_label='', x_axis=True, y_label=None, y_axis_unit='', spines=False, mineral_size=1, feature_size=1, xmax=None, legend_titles=['Lithologies', 'Minerals', 'Sedimentary Structures', 'Palaeontological Features', 'Tectonic Structures', 'Bed Contacts', 'Sample Indicators'], legend=True, legend_kwargs={}, consec_units=True) -> tuple:
         """
         Creates a stratigraphic plot based on the loaded data and specified parameters. 
         
@@ -132,10 +132,12 @@ class LogObject:
             Scaling factor for the size of features in the plot. Default is 1.
         legend_titles : list, optional
             The titles for the legend sections. Default is ['Lithologies', 'Minerals', 'Structures', 'Fossils', 'Bed Contacts']. Note: the order of display of the legend is fixed (lithologies, then minerals, etc.), only names can be changed.
-        legend_kwargs : dict, optional
-            Additional keyword arguments to pass to the legend function, such as ``frameon``, etc. Default is an empty dictionary. Note: this will be overriden by the ``legend_loc``, ``legend_columns``, and ``legend_border`` parameters, if they are provided.
         legend : bool, optional
             If False, no legend will be displayed. Default is True. Note: the ``sp.standalone_legend()`` function can be used to create a separate legend figure if no legend is wanted on the main plot.
+        legend_kwargs : dict, optional
+            Additional keyword arguments to pass to the legend function, such as ``frameon``, etc. Default is an empty dictionary. Note: this will be overriden by the ``legend_loc``, ``legend_columns``, and ``legend_border`` parameters, if they are provided.
+        consec_units : bool, optional
+            If True, consecutive units with the same lithology or styling will be merged into a single unit in the plot. Else, each unit will be plotted separately, with their own bed contacts. Default is True.
 
         Returns
         ----------
@@ -200,7 +202,8 @@ class LogObject:
             x_tick_labels,
             params['legend_titles'],
             params['legend_kwargs'],
-            self.grain_brackets
+            self.grain_brackets,
+            params['consec_units']
         )
 
         from .plot import create_log
@@ -685,7 +688,8 @@ def standalone_legend(files, dpi=300, transparent=True, filename='legend.png', l
             {},
             params['legend_titles'],
             params['legend_kwargs'],
-            log.grain_brackets
+            log.grain_brackets,
+            params['consec_units']
         )
 
     # Get the y_limits of each log to faciliate base-to-top legend order

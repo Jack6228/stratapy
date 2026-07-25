@@ -11,7 +11,7 @@ stratapy offers a vast range of customisation options to suit needs of users fro
 -   **Advanced plotting**: Creating multi-log figures, correlated logs, and bespoke figure layouts
 
 .. tip::
-   Examples of all these customisation examples can be explored interactively in the `accompanying Jupyter notebooks <https://github.com/file>`_. The :doc:`Gallery <../reference/gallery>` also includes a range of example logs and figures which can be copied and adapted.
+   Examples of all these customisation examples can be explored interactively in the `accompanying Jupyter notebooks <https://github.com/Jack6228/stratapy/tree/main/examples>`_. The :doc:`Gallery <../reference/gallery>` also includes a range of example logs and figures which can be copied and adapted.
 
 Click on any of the cards below to access the relevant section of examples and explanations.
 

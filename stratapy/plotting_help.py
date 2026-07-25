@@ -20,7 +20,7 @@ class PlottingHelp:
     This helper class stores all variables and functions related to plotting and has a range of methods to create the log.
     """
 
-    def __init__(self, vars, display_mode, feature_mode, unit_borders, legend_loc, legend_columns, legend_border, fontsize, figsize, dpi, ppi, N, x_label, x_axis, y_label, y_axis_unit, spines, mineral_size, feature_size, xmax, x_ticks, x_tick_labels, legend_titles, legend_kwargs, grain_brackets) -> None:
+    def __init__(self, vars, display_mode, feature_mode, unit_borders, legend_loc, legend_columns, legend_border, fontsize, figsize, dpi, ppi, N, x_label, x_axis, y_label, y_axis_unit, spines, mineral_size, feature_size, xmax, x_ticks, x_tick_labels, legend_titles, legend_kwargs, grain_brackets, consec_units) -> None:
         """
         Initialises the PlottingHelp class with all plotting variables and parameters
         """
@@ -41,6 +41,7 @@ class PlottingHelp:
         self.legend_titles = legend_titles
         self.legend_kwargs = legend_kwargs
         self.grain_brackets = grain_brackets
+        self.consec_units = consec_units
 
         # Collect parameters from the dataframe
         self.max_y_val, self.min_y_val = self.df['height/age'].max(), self.df['height/age'].min() - self.df.iloc[-1]['thickness']

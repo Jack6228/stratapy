@@ -100,24 +100,24 @@ def draw_stratum_borders(ax, df, row, helper, geom, idx, prev_bottom) -> array:
     if idx == len(df)-1:
         plot_efficient_line(ax, bottom_line[:, 0], bottom_line[:, 1], color='k', lw=helper.border_lw, ls='solid', zord=helper.zorder_borders, clip_on=False)
 
-    if idx > 0:# and plot_upper_border:
+    if (idx > 0):# and plot_upper_border:
         prev_bot = prev_bottom[::-1]
         # Determine gap size (x-axis) between previous bottom and current top. This enables the border to be displayed correctly, accounting for two units meeting with different grain sizes.
         gap = abs(top_line[:, 0][-1] - prev_bot[:, 0][-1])
 
-        # If the gap is zero and the lithologies are different, plot the top line
-        if gap == 0 and row['rock'] != df.iloc[idx-1].rock:
+        # If the gap is zero and the lithologies are different (or consec_units is False), plot the top line
+        if (gap == 0) and ((row['rock'] != df.iloc[idx-1].rock) or (not helper.consec_units)):
             plot_efficient_line(ax, top_line[:, 0], top_line[:, 1], color=fmt[2], lw=fmt[0], ls=fmt[1], zord=helper.zorder_borders)
             
-        # If the gap is non-zero and the lithologies are different, plot the longer line
-        elif gap > 0 and row['rock'] != df.iloc[idx-1].rock:
+        # If the gap is non-zero and the lithologies are different (or consec_units is False), plot the longer line
+        elif (gap > 0) and ((row['rock'] != df.iloc[idx-1].rock) or (not helper.consec_units)):
             if top_line[:, 0][-1] > prev_bot[:, 0][-1]:
                 plot_efficient_line(ax, top_line[:, 0], top_line[:, 1], color=fmt[2], lw=fmt[0], ls=fmt[1], zord=helper.zorder_borders)
             else:
                 plot_efficient_line(ax, prev_bot[:, 0], prev_bot[:, 1], color=fmt[2], lw=fmt[0], ls=fmt[1], zord=helper.zorder_borders)
 
         # If the gap is non-zero and the lithologies are the same, plot the line that spans the gap, i.e. the longer of the two
-        elif gap > 0 and row['rock'] == df.iloc[idx-1].rock:
+        elif (gap > 0) and (row['rock'] == df.iloc[idx-1].rock) and (helper.consec_units):
             min_x = min(top_line[:, 0][-1], prev_bot[:, 0][-1])
             if top_line[:, 0][-1] > prev_bot[:, 0][-1]:
                 plot_efficient_line(ax, top_line[:, 0][top_line[:, 0] >= min_x], top_line[:, 1][top_line[:, 0] >= min_x], color=fmt[2], lw=fmt[0], ls=fmt[1], zord=helper.zorder_borders)
@@ -326,17 +326,20 @@ def create_log(helper : object, fig, ax, override_ylims, share_legend) -> tuple[
         # Extract geometries for this unit
         geom_a, geom_b, geom_c = all_geom_a[r], all_geom_b[r], all_geom_c[r]
 
-        # Check if this stratum is part of a larger combination of strata
-        if (r < len(helper.df)-1 and row.rock == helper.df.iloc[r+1].rock) and (row.rock != 'no') and ((r == 0) or (r > 0 and row.rock != helper.df.iloc[r-1].rock)):
+        # Check if this stratum is part of a larger combination of strata, and that consecutive units are to be combined
+        if helper.consec_units and (r < len(helper.df)-1 and row.rock == helper.df.iloc[r+1].rock) and (row.rock != 'no') and ((r == 0) or (r > 0 and row.rock != helper.df.iloc[r-1].rock)):
+            # If this is the first unit of a combined stratum
             combined_strata.append(geom_a[0])
             plot_upper_border = True
             combined_right.append(geom_b[4])
 
-        elif (r > 0 and row.rock == helper.df.iloc[r-1].rock) and (r < len(helper.df)-1 and row.rock == helper.df.iloc[r+1].rock) and row.rock != 'no':
+        elif helper.consec_units and (r > 0 and row.rock == helper.df.iloc[r-1].rock) and (r < len(helper.df)-1 and row.rock == helper.df.iloc[r+1].rock) and row.rock != 'no':
+            # If this is a middle unit of a combined stratum
             combined_strata.append(geom_a[0])
             combined_right.append(geom_b[4])
 
-        elif (r > 0 and row.rock == helper.df.iloc[r-1].rock) and ( (r < len(helper.df)-1 and row.rock != helper.df.iloc[r+1].rock) or r == len(helper.df)-1 ) and row.rock != 'no':
+        elif helper.consec_units and (r > 0 and row.rock == helper.df.iloc[r-1].rock) and ( (r < len(helper.df)-1 and row.rock != helper.df.iloc[r+1].rock) or r == len(helper.df)-1 ) and row.rock != 'no':
+            # If this is the last unit of a combined stratum
             combined_strata.append(geom_a[0])
             combined_right.append(geom_b[4])
 
@@ -417,6 +420,7 @@ def create_log(helper : object, fig, ax, override_ylims, share_legend) -> tuple[
             combined_right = []
 
         else:
+            # If this unit is not part of a combined stratum, plot it normally
             # If the top grain size of this unit is larger than the bottom of the previous unit, increase zorder to display above the previous unit AND it's border. This prevents unwanted overlaps between unit fills and borders.
             if r > 0 and row['top_grain'] > helper.df.iloc[r-1]['bottom_grain']:
                 zord += 1
