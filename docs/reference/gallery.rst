@@ -61,7 +61,7 @@ Keywords: custom lithologies, Cyprus, depositional history, sedimentary log
 
 .. rubric:: Aligned Borehole Logs
 
-This example demonstrates a simple stratigraphic column with sedimentary units and annotations.
+This example shows multiple logs from one locality, aligned to a common depth scale. The logs are plotted with a shared legend and consistent formatting.
 
 Keywords: borehole logs, aligned logs, correlated logs
 
@@ -73,7 +73,7 @@ Keywords: borehole logs, aligned logs, correlated logs
 
 .. rubric:: Tephrochronology
 
-This example demonstrates a simple stratigraphic column with sedimentary units and annotations.
+Aligned logs with tephra layers indicated by a custom lithology pattern, as well as utilisation of the ``log.add_labels`` method to add formatted labels for the tephra layers.
 
 Keywords: tephrochronology, tephra, correlated logs, volcanic ash layers, geochronology
 

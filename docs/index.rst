@@ -73,9 +73,9 @@ Citing stratapy
       author={Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
       journal={Scientific Reports},
       year={2026},
-      volume={},
-      issue={},
-      month={},
+      volume={16},
+      issue={28256},
+      month={June},
       publisher={Nature Publishing Group},
       doi={10.1038/s41598-026-58501-2},
       url={https://www.nature.com/articles/s41598-026-58501-2}

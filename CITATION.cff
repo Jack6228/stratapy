@@ -49,9 +49,7 @@ preferred-citation:
   abstract: "Stratigraphic logs are the fundamental interface between geological observations and scientific interpretation. Manual log visualisation is time-consuming and difficult to reproduce, yet existing digitisation tools are limited and often tailored to specific fields and applications, with many unable to provide core functions. We present stratapy: a Python package for rapid, high-quality log digitisation, designed to be accessible for non-programmers. The tool enables scientists across a range of disciplines to rapidly generate publication-quality stratigraphic logs with basic text- or spreadsheet-based inputs. We have designed stratapy to be accessible even to non-programmers while maintaining a high degree of flexibility in both style and function using a simple parameter-based customisation approach. We incorporate standardised lithological patterns and curated geological features and symbology, as well as automatic correlation with the chronostratigraphic column, the addition of sample locations, annotations and more. For more tailored visualisation, stratapy can easily assemble multi-panel or stratigraphically correlated logs to illustrate complex systems. With applications across research and industry, we create a standardised framework for log illustration and digitisation. This tool will modernise scientific workflows, improving the quality of stratigraphic logs and their interpretation, while contributing towards improved digital practices in the Earth sciences."
   journal: "Scientific Reports"
   year: 2026
-  volume: 
-  issue: 
-  start:      # First page
-  end:        # Last page
+  volume: 16
+  issue: 28256
   doi: "10.1038/s41598-026-58501-2"
   url: "https://www.nature.com/articles/s41598-026-58501-2"

@@ -87,7 +87,7 @@ For full API reference and tutorials, visit [our ReadTheDocs page](https://strat
 
 If you use this software in your research or otherwise, please cite its associated publication:
 
-> Smith, J. L., Antoniou, C., & Alexander, R. (2026). Stratapy: a tool for automated stratigraphic log visualisation. *Scientific Reports* **16** 1 https://doi.org/10.1038/s41598-026-58501-2
+> Smith, J. L., Antoniou, C., & Alexander, R. (2026). Stratapy: a tool for automated stratigraphic log visualisation. *Scientific Reports* **16** 28256 https://doi.org/10.1038/s41598-026-58501-2
 
 For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the following BibTeX entry:
 
@@ -96,8 +96,8 @@ For detailed citation metadata, see [`CITATION.cff`](CITATION.cff) or use the fo
   author       = {Smith, Jack Lee and Antoniou, Christina and Alexander, Ruaridh},
   title        = {Stratapy: a tool for automated stratigraphic log visualisation},
   journal      = {Scientific Reports},
-  volume       = {},
-  number       = {},
+  volume       = {16},
+  number       = {28256},
   month        = june,
   year         = 2026,
   doi          = {10.1038/s41598-026-58501-2},
